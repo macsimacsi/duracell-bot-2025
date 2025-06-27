@@ -1,0 +1,1843 @@
+[
+  {
+    "DPTO": "00",
+    "DPTO_DESC": "ASUNCION",
+    "DISTRITO": "00",
+    "DIST_DESC_": "ASUNCION",
+    "CLAVE": "0000"
+  },
+  {
+    "DPTO": "01",
+    "DPTO_DESC": "CONCEPCION",
+    "DISTRITO": "01",
+    "DIST_DESC_": "CONCEPCION",
+    "CLAVE": "0101"
+  },
+  {
+    "DPTO": "01",
+    "DPTO_DESC": "CONCEPCION",
+    "DISTRITO": "02",
+    "DIST_DESC_": "BELEN",
+    "CLAVE": "0102"
+  },
+  {
+    "DPTO": "01",
+    "DPTO_DESC": "CONCEPCION",
+    "DISTRITO": "03",
+    "DIST_DESC_": "HORQUETA",
+    "CLAVE": "0103"
+  },
+  {
+    "DPTO": "01",
+    "DPTO_DESC": "CONCEPCION",
+    "DISTRITO": "04",
+    "DIST_DESC_": "LORETO",
+    "CLAVE": "0104"
+  },
+  {
+    "DPTO": "01",
+    "DPTO_DESC": "CONCEPCION",
+    "DISTRITO": "05",
+    "DIST_DESC_": "SAN CARLOS DEL APA",
+    "CLAVE": "0105"
+  },
+  {
+    "DPTO": "01",
+    "DPTO_DESC": "CONCEPCION",
+    "DISTRITO": "06",
+    "DIST_DESC_": "SAN LAZARO",
+    "CLAVE": "0106"
+  },
+  {
+    "DPTO": "01",
+    "DPTO_DESC": "CONCEPCION",
+    "DISTRITO": "07",
+    "DIST_DESC_": "YBY YAU",
+    "CLAVE": "0107"
+  },
+  {
+    "DPTO": "01",
+    "DPTO_DESC": "CONCEPCION",
+    "DISTRITO": "08",
+    "DIST_DESC_": "AZOTE'Y",
+    "CLAVE": "0108"
+  },
+  {
+    "DPTO": "01",
+    "DPTO_DESC": "CONCEPCION",
+    "DISTRITO": "09",
+    "DIST_DESC_": "SARGENTO JOSE FELIX LOPEZ",
+    "CLAVE": "0109"
+  },
+  {
+    "DPTO": "01",
+    "DPTO_DESC": "CONCEPCION",
+    "DISTRITO": "10",
+    "DIST_DESC_": "SAN ALFREDO",
+    "CLAVE": "0110"
+  },
+  {
+    "DPTO": "01",
+    "DPTO_DESC": "CONCEPCION",
+    "DISTRITO": "11",
+    "DIST_DESC_": "PASO BARRETO",
+    "CLAVE": "0111"
+  },
+  {
+    "DPTO": "01",
+    "DPTO_DESC": "CONCEPCION",
+    "DISTRITO": "12",
+    "DIST_DESC_": "ARROYITO",
+    "CLAVE": "0112"
+  },
+  {
+    "DPTO": "01",
+    "DPTO_DESC": "CONCEPCION",
+    "DISTRITO": "13",
+    "DIST_DESC_": "PASO HORQUETA",
+    "CLAVE": "0113"
+  },
+  {
+    "DPTO": "01",
+    "DPTO_DESC": "CONCEPCION",
+    "DISTRITO": "14",
+    "DIST_DESC_": "ITACUA",
+    "CLAVE": "0114"
+  },
+  {
+    "DPTO": "02",
+    "DPTO_DESC": "SAN PEDRO",
+    "DISTRITO": "01",
+    "DIST_DESC_": "SAN PEDRO DEL YCUAMANDYYU",
+    "CLAVE": "0201"
+  },
+  {
+    "DPTO": "02",
+    "DPTO_DESC": "SAN PEDRO",
+    "DISTRITO": "02",
+    "DIST_DESC_": "ANTEQUERA",
+    "CLAVE": "0202"
+  },
+  {
+    "DPTO": "02",
+    "DPTO_DESC": "SAN PEDRO",
+    "DISTRITO": "03",
+    "DIST_DESC_": "CHORE",
+    "CLAVE": "0203"
+  },
+  {
+    "DPTO": "02",
+    "DPTO_DESC": "SAN PEDRO",
+    "DISTRITO": "04",
+    "DIST_DESC_": "GENERAL ELIZARDO AQUINO",
+    "CLAVE": "0204"
+  },
+  {
+    "DPTO": "02",
+    "DPTO_DESC": "SAN PEDRO",
+    "DISTRITO": "05",
+    "DIST_DESC_": "ITACURUBI DEL ROSARIO",
+    "CLAVE": "0205"
+  },
+  {
+    "DPTO": "02",
+    "DPTO_DESC": "SAN PEDRO",
+    "DISTRITO": "06",
+    "DIST_DESC_": "LIMA",
+    "CLAVE": "0206"
+  },
+  {
+    "DPTO": "02",
+    "DPTO_DESC": "SAN PEDRO",
+    "DISTRITO": "07",
+    "DIST_DESC_": "NUEVA GERMANIA",
+    "CLAVE": "0207"
+  },
+  {
+    "DPTO": "02",
+    "DPTO_DESC": "SAN PEDRO",
+    "DISTRITO": "08",
+    "DIST_DESC_": "SAN ESTANISLAO",
+    "CLAVE": "0208"
+  },
+  {
+    "DPTO": "02",
+    "DPTO_DESC": "SAN PEDRO",
+    "DISTRITO": "09",
+    "DIST_DESC_": "SAN PABLO",
+    "CLAVE": "0209"
+  },
+  {
+    "DPTO": "02",
+    "DPTO_DESC": "SAN PEDRO",
+    "DISTRITO": "10",
+    "DIST_DESC_": "TACUATI",
+    "CLAVE": "0210"
+  },
+  {
+    "DPTO": "02",
+    "DPTO_DESC": "SAN PEDRO",
+    "DISTRITO": "11",
+    "DIST_DESC_": "UNION",
+    "CLAVE": "0211"
+  },
+  {
+    "DPTO": "02",
+    "DPTO_DESC": "SAN PEDRO",
+    "DISTRITO": "12",
+    "DIST_DESC_": "25 DE DICIEMBRE",
+    "CLAVE": "0212"
+  },
+  {
+    "DPTO": "02",
+    "DPTO_DESC": "SAN PEDRO",
+    "DISTRITO": "13",
+    "DIST_DESC_": "VILLA DEL ROSARIO",
+    "CLAVE": "0213"
+  },
+  {
+    "DPTO": "02",
+    "DPTO_DESC": "SAN PEDRO",
+    "DISTRITO": "14",
+    "DIST_DESC_": "GENERAL FRANCISCO ISIDORO RESQUIN",
+    "CLAVE": "0214"
+  },
+  {
+    "DPTO": "02",
+    "DPTO_DESC": "SAN PEDRO",
+    "DISTRITO": "15",
+    "DIST_DESC_": "YATAITY DEL NORTE",
+    "CLAVE": "0215"
+  },
+  {
+    "DPTO": "02",
+    "DPTO_DESC": "SAN PEDRO",
+    "DISTRITO": "16",
+    "DIST_DESC_": "GUAJAYVI",
+    "CLAVE": "0216"
+  },
+  {
+    "DPTO": "02",
+    "DPTO_DESC": "SAN PEDRO",
+    "DISTRITO": "17",
+    "DIST_DESC_": "CAPIIBARY",
+    "CLAVE": "0217"
+  },
+  {
+    "DPTO": "02",
+    "DPTO_DESC": "SAN PEDRO",
+    "DISTRITO": "18",
+    "DIST_DESC_": "SANTA ROSA DEL AGUARAY",
+    "CLAVE": "0218"
+  },
+  {
+    "DPTO": "02",
+    "DPTO_DESC": "SAN PEDRO",
+    "DISTRITO": "19",
+    "DIST_DESC_": "YRYBUCUA",
+    "CLAVE": "0219"
+  },
+  {
+    "DPTO": "02",
+    "DPTO_DESC": "SAN PEDRO",
+    "DISTRITO": "20",
+    "DIST_DESC_": "LIBERACION",
+    "CLAVE": "0220"
+  },
+  {
+    "DPTO": "02",
+    "DPTO_DESC": "SAN PEDRO",
+    "DISTRITO": "21",
+    "DIST_DESC_": "SAN VICENTE PANCHOLO",
+    "CLAVE": "0221"
+  },
+  {
+    "DPTO": "02",
+    "DPTO_DESC": "SAN PEDRO",
+    "DISTRITO": "22",
+    "DIST_DESC_": "SAN JOSE DEL ROSARIO",
+    "CLAVE": "0222"
+  },
+  {
+    "DPTO": "03",
+    "DPTO_DESC": "CORDILLERA",
+    "DISTRITO": "01",
+    "DIST_DESC_": "CAACUPE",
+    "CLAVE": "0301"
+  },
+  {
+    "DPTO": "03",
+    "DPTO_DESC": "CORDILLERA",
+    "DISTRITO": "02",
+    "DIST_DESC_": "ALTOS",
+    "CLAVE": "0302"
+  },
+  {
+    "DPTO": "03",
+    "DPTO_DESC": "CORDILLERA",
+    "DISTRITO": "03",
+    "DIST_DESC_": "ARROYOS Y ESTEROS",
+    "CLAVE": "0303"
+  },
+  {
+    "DPTO": "03",
+    "DPTO_DESC": "CORDILLERA",
+    "DISTRITO": "04",
+    "DIST_DESC_": "ATYRA",
+    "CLAVE": "0304"
+  },
+  {
+    "DPTO": "03",
+    "DPTO_DESC": "CORDILLERA",
+    "DISTRITO": "05",
+    "DIST_DESC_": "CARAGUATAY",
+    "CLAVE": "0305"
+  },
+  {
+    "DPTO": "03",
+    "DPTO_DESC": "CORDILLERA",
+    "DISTRITO": "06",
+    "DIST_DESC_": "EMBOSCADA",
+    "CLAVE": "0306"
+  },
+  {
+    "DPTO": "03",
+    "DPTO_DESC": "CORDILLERA",
+    "DISTRITO": "07",
+    "DIST_DESC_": "EUSEBIO AYALA",
+    "CLAVE": "0307"
+  },
+  {
+    "DPTO": "03",
+    "DPTO_DESC": "CORDILLERA",
+    "DISTRITO": "08",
+    "DIST_DESC_": "ISLA PUCU",
+    "CLAVE": "0308"
+  },
+  {
+    "DPTO": "03",
+    "DPTO_DESC": "CORDILLERA",
+    "DISTRITO": "09",
+    "DIST_DESC_": "ITACURUBI DE LA CORDILLERA",
+    "CLAVE": "0309"
+  },
+  {
+    "DPTO": "03",
+    "DPTO_DESC": "CORDILLERA",
+    "DISTRITO": "10",
+    "DIST_DESC_": "JUAN DE MENA",
+    "CLAVE": "0310"
+  },
+  {
+    "DPTO": "03",
+    "DPTO_DESC": "CORDILLERA",
+    "DISTRITO": "11",
+    "DIST_DESC_": "LOMA GRANDE",
+    "CLAVE": "0311"
+  },
+  {
+    "DPTO": "03",
+    "DPTO_DESC": "CORDILLERA",
+    "DISTRITO": "12",
+    "DIST_DESC_": "MBOCAYATY DEL YHAGUY",
+    "CLAVE": "0312"
+  },
+  {
+    "DPTO": "03",
+    "DPTO_DESC": "CORDILLERA",
+    "DISTRITO": "13",
+    "DIST_DESC_": "NUEVA COLOMBIA",
+    "CLAVE": "0313"
+  },
+  {
+    "DPTO": "03",
+    "DPTO_DESC": "CORDILLERA",
+    "DISTRITO": "14",
+    "DIST_DESC_": "PIRIBEBUY",
+    "CLAVE": "0314"
+  },
+  {
+    "DPTO": "03",
+    "DPTO_DESC": "CORDILLERA",
+    "DISTRITO": "15",
+    "DIST_DESC_": "PRIMERO DE MARZO",
+    "CLAVE": "0315"
+  },
+  {
+    "DPTO": "03",
+    "DPTO_DESC": "CORDILLERA",
+    "DISTRITO": "16",
+    "DIST_DESC_": "SAN BERNARDINO",
+    "CLAVE": "0316"
+  },
+  {
+    "DPTO": "03",
+    "DPTO_DESC": "CORDILLERA",
+    "DISTRITO": "17",
+    "DIST_DESC_": "SANTA ELENA",
+    "CLAVE": "0317"
+  },
+  {
+    "DPTO": "03",
+    "DPTO_DESC": "CORDILLERA",
+    "DISTRITO": "18",
+    "DIST_DESC_": "TOBATI",
+    "CLAVE": "0318"
+  },
+  {
+    "DPTO": "03",
+    "DPTO_DESC": "CORDILLERA",
+    "DISTRITO": "19",
+    "DIST_DESC_": "VALENZUELA",
+    "CLAVE": "0319"
+  },
+  {
+    "DPTO": "03",
+    "DPTO_DESC": "CORDILLERA",
+    "DISTRITO": "20",
+    "DIST_DESC_": "SAN JOSE OBRERO",
+    "CLAVE": "0320"
+  },
+  {
+    "DPTO": "04",
+    "DPTO_DESC": "GUAIRA",
+    "DISTRITO": "01",
+    "DIST_DESC_": "VILLARRICA",
+    "CLAVE": "0401"
+  },
+  {
+    "DPTO": "04",
+    "DPTO_DESC": "GUAIRA",
+    "DISTRITO": "02",
+    "DIST_DESC_": "BORJA",
+    "CLAVE": "0402"
+  },
+  {
+    "DPTO": "04",
+    "DPTO_DESC": "GUAIRA",
+    "DISTRITO": "03",
+    "DIST_DESC_": "CAPITAN MAURICIO JOSE TROCHE",
+    "CLAVE": "0403"
+  },
+  {
+    "DPTO": "04",
+    "DPTO_DESC": "GUAIRA",
+    "DISTRITO": "04",
+    "DIST_DESC_": "CORONEL MARTINEZ",
+    "CLAVE": "0404"
+  },
+  {
+    "DPTO": "04",
+    "DPTO_DESC": "GUAIRA",
+    "DISTRITO": "05",
+    "DIST_DESC_": "FELIX PEREZ CARDOZO",
+    "CLAVE": "0405"
+  },
+  {
+    "DPTO": "04",
+    "DPTO_DESC": "GUAIRA",
+    "DISTRITO": "06",
+    "DIST_DESC_": "GRAL. EUGENIO A. GARAY",
+    "CLAVE": "0406"
+  },
+  {
+    "DPTO": "04",
+    "DPTO_DESC": "GUAIRA",
+    "DISTRITO": "07",
+    "DIST_DESC_": "COLONIA INDEPENDENCIA",
+    "CLAVE": "0407"
+  },
+  {
+    "DPTO": "04",
+    "DPTO_DESC": "GUAIRA",
+    "DISTRITO": "08",
+    "DIST_DESC_": "ITAPE",
+    "CLAVE": "0408"
+  },
+  {
+    "DPTO": "04",
+    "DPTO_DESC": "GUAIRA",
+    "DISTRITO": "09",
+    "DIST_DESC_": "ITURBE",
+    "CLAVE": "0409"
+  },
+  {
+    "DPTO": "04",
+    "DPTO_DESC": "GUAIRA",
+    "DISTRITO": "10",
+    "DIST_DESC_": "JOSE FASSARDI",
+    "CLAVE": "0410"
+  },
+  {
+    "DPTO": "04",
+    "DPTO_DESC": "GUAIRA",
+    "DISTRITO": "11",
+    "DIST_DESC_": "MBOCAYATY",
+    "CLAVE": "0411"
+  },
+  {
+    "DPTO": "04",
+    "DPTO_DESC": "GUAIRA",
+    "DISTRITO": "12",
+    "DIST_DESC_": "NATALICIO TALAVERA",
+    "CLAVE": "0412"
+  },
+  {
+    "DPTO": "04",
+    "DPTO_DESC": "GUAIRA",
+    "DISTRITO": "13",
+    "DIST_DESC_": "ÑUMI",
+    "CLAVE": "0413"
+  },
+  {
+    "DPTO": "04",
+    "DPTO_DESC": "GUAIRA",
+    "DISTRITO": "14",
+    "DIST_DESC_": "SAN SALVADOR",
+    "CLAVE": "0414"
+  },
+  {
+    "DPTO": "04",
+    "DPTO_DESC": "GUAIRA",
+    "DISTRITO": "15",
+    "DIST_DESC_": "YATAITY",
+    "CLAVE": "0415"
+  },
+  {
+    "DPTO": "04",
+    "DPTO_DESC": "GUAIRA",
+    "DISTRITO": "16",
+    "DIST_DESC_": "DOCTOR BOTTRELL",
+    "CLAVE": "0416"
+  },
+  {
+    "DPTO": "04",
+    "DPTO_DESC": "GUAIRA",
+    "DISTRITO": "17",
+    "DIST_DESC_": "PASO YOBAI",
+    "CLAVE": "0417"
+  },
+  {
+    "DPTO": "04",
+    "DPTO_DESC": "GUAIRA",
+    "DISTRITO": "18",
+    "DIST_DESC_": "TEBICUARY",
+    "CLAVE": "0418"
+  },
+  {
+    "DPTO": "05",
+    "DPTO_DESC": "CAAGUAZU",
+    "DISTRITO": "01",
+    "DIST_DESC_": "CORONEL OVIEDO",
+    "CLAVE": "0501"
+  },
+  {
+    "DPTO": "05",
+    "DPTO_DESC": "CAAGUAZU",
+    "DISTRITO": "02",
+    "DIST_DESC_": "CAAGUAZU",
+    "CLAVE": "0502"
+  },
+  {
+    "DPTO": "05",
+    "DPTO_DESC": "CAAGUAZU",
+    "DISTRITO": "03",
+    "DIST_DESC_": "CARAYAO",
+    "CLAVE": "0503"
+  },
+  {
+    "DPTO": "05",
+    "DPTO_DESC": "CAAGUAZU",
+    "DISTRITO": "04",
+    "DIST_DESC_": "DR. CECILIO BAEZ",
+    "CLAVE": "0504"
+  },
+  {
+    "DPTO": "05",
+    "DPTO_DESC": "CAAGUAZU",
+    "DISTRITO": "05",
+    "DIST_DESC_": "SANTA ROSA DEL MBUTUY",
+    "CLAVE": "0505"
+  },
+  {
+    "DPTO": "05",
+    "DPTO_DESC": "CAAGUAZU",
+    "DISTRITO": "06",
+    "DIST_DESC_": "DR. JUAN MANUEL FRUTOS",
+    "CLAVE": "0506"
+  },
+  {
+    "DPTO": "05",
+    "DPTO_DESC": "CAAGUAZU",
+    "DISTRITO": "07",
+    "DIST_DESC_": "REPATRIACION",
+    "CLAVE": "0507"
+  },
+  {
+    "DPTO": "05",
+    "DPTO_DESC": "CAAGUAZU",
+    "DISTRITO": "08",
+    "DIST_DESC_": "NUEVA LONDRES",
+    "CLAVE": "0508"
+  },
+  {
+    "DPTO": "05",
+    "DPTO_DESC": "CAAGUAZU",
+    "DISTRITO": "09",
+    "DIST_DESC_": "SAN JOAQUIN",
+    "CLAVE": "0509"
+  },
+  {
+    "DPTO": "05",
+    "DPTO_DESC": "CAAGUAZU",
+    "DISTRITO": "10",
+    "DIST_DESC_": "SAN JOSE DE LOS ARROYOS",
+    "CLAVE": "0510"
+  },
+  {
+    "DPTO": "05",
+    "DPTO_DESC": "CAAGUAZU",
+    "DISTRITO": "11",
+    "DIST_DESC_": "YHU",
+    "CLAVE": "0511"
+  },
+  {
+    "DPTO": "05",
+    "DPTO_DESC": "CAAGUAZU",
+    "DISTRITO": "12",
+    "DIST_DESC_": "DR. J. EULOGIO ESTIGARRIBIA",
+    "CLAVE": "0512"
+  },
+  {
+    "DPTO": "05",
+    "DPTO_DESC": "CAAGUAZU",
+    "DISTRITO": "13",
+    "DIST_DESC_": "R.I. 3 CORRALES",
+    "CLAVE": "0513"
+  },
+  {
+    "DPTO": "05",
+    "DPTO_DESC": "CAAGUAZU",
+    "DISTRITO": "14",
+    "DIST_DESC_": "RAUL ARSENIO OVIEDO",
+    "CLAVE": "0514"
+  },
+  {
+    "DPTO": "05",
+    "DPTO_DESC": "CAAGUAZU",
+    "DISTRITO": "15",
+    "DIST_DESC_": "JOSE DOMINGO OCAMPOS",
+    "CLAVE": "0515"
+  },
+  {
+    "DPTO": "05",
+    "DPTO_DESC": "CAAGUAZU",
+    "DISTRITO": "16",
+    "DIST_DESC_": "MARISCAL FRANCISCO SOLANO LOPEZ",
+    "CLAVE": "0516"
+  },
+  {
+    "DPTO": "05",
+    "DPTO_DESC": "CAAGUAZU",
+    "DISTRITO": "17",
+    "DIST_DESC_": "LA PASTORA",
+    "CLAVE": "0517"
+  },
+  {
+    "DPTO": "05",
+    "DPTO_DESC": "CAAGUAZU",
+    "DISTRITO": "18",
+    "DIST_DESC_": "3 DE FEBRERO",
+    "CLAVE": "0518"
+  },
+  {
+    "DPTO": "05",
+    "DPTO_DESC": "CAAGUAZU",
+    "DISTRITO": "19",
+    "DIST_DESC_": "SIMON BOLIVAR",
+    "CLAVE": "0519"
+  },
+  {
+    "DPTO": "05",
+    "DPTO_DESC": "CAAGUAZU",
+    "DISTRITO": "20",
+    "DIST_DESC_": "VAQUERIA",
+    "CLAVE": "0520"
+  },
+  {
+    "DPTO": "05",
+    "DPTO_DESC": "CAAGUAZU",
+    "DISTRITO": "21",
+    "DIST_DESC_": "TEMBIAPORA",
+    "CLAVE": "0521"
+  },
+  {
+    "DPTO": "05",
+    "DPTO_DESC": "CAAGUAZU",
+    "DISTRITO": "22",
+    "DIST_DESC_": "NUEVA TOLEDO",
+    "CLAVE": "0522"
+  },
+  {
+    "DPTO": "06",
+    "DPTO_DESC": "CAAZAPA",
+    "DISTRITO": "01",
+    "DIST_DESC_": "CAAZAPA",
+    "CLAVE": "0601"
+  },
+  {
+    "DPTO": "06",
+    "DPTO_DESC": "CAAZAPA",
+    "DISTRITO": "02",
+    "DIST_DESC_": "ABAI",
+    "CLAVE": "0602"
+  },
+  {
+    "DPTO": "06",
+    "DPTO_DESC": "CAAZAPA",
+    "DISTRITO": "03",
+    "DIST_DESC_": "BUENA VISTA",
+    "CLAVE": "0603"
+  },
+  {
+    "DPTO": "06",
+    "DPTO_DESC": "CAAZAPA",
+    "DISTRITO": "04",
+    "DIST_DESC_": "DR. MOISES S. BERTONI",
+    "CLAVE": "0604"
+  },
+  {
+    "DPTO": "06",
+    "DPTO_DESC": "CAAZAPA",
+    "DISTRITO": "05",
+    "DIST_DESC_": "GRAL. HIGINIO MORINIGO",
+    "CLAVE": "0605"
+  },
+  {
+    "DPTO": "06",
+    "DPTO_DESC": "CAAZAPA",
+    "DISTRITO": "06",
+    "DIST_DESC_": "MACIEL",
+    "CLAVE": "0606"
+  },
+  {
+    "DPTO": "06",
+    "DPTO_DESC": "CAAZAPA",
+    "DISTRITO": "07",
+    "DIST_DESC_": "SAN JUAN NEPOMUCENO",
+    "CLAVE": "0607"
+  },
+  {
+    "DPTO": "06",
+    "DPTO_DESC": "CAAZAPA",
+    "DISTRITO": "08",
+    "DIST_DESC_": "TAVAI",
+    "CLAVE": "0608"
+  },
+  {
+    "DPTO": "06",
+    "DPTO_DESC": "CAAZAPA",
+    "DISTRITO": "09",
+    "DIST_DESC_": "YEGROS",
+    "CLAVE": "0609"
+  },
+  {
+    "DPTO": "06",
+    "DPTO_DESC": "CAAZAPA",
+    "DISTRITO": "10",
+    "DIST_DESC_": "YUTY",
+    "CLAVE": "0610"
+  },
+  {
+    "DPTO": "06",
+    "DPTO_DESC": "CAAZAPA",
+    "DISTRITO": "11",
+    "DIST_DESC_": "3 DE MAYO",
+    "CLAVE": "0611"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "01",
+    "DIST_DESC_": "ENCARNACION",
+    "CLAVE": "0701"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "02",
+    "DIST_DESC_": "BELLA VISTA",
+    "CLAVE": "0702"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "03",
+    "DIST_DESC_": "CAMBYRETA",
+    "CLAVE": "0703"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "04",
+    "DIST_DESC_": "CAPITAN MEZA",
+    "CLAVE": "0704"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "05",
+    "DIST_DESC_": "CAPITAN MIRANDA",
+    "CLAVE": "0705"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "06",
+    "DIST_DESC_": "NUEVA ALBORADA",
+    "CLAVE": "0706"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "07",
+    "DIST_DESC_": "CARMEN DEL PARANA",
+    "CLAVE": "0707"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "08",
+    "DIST_DESC_": "CORONEL BOGADO",
+    "CLAVE": "0708"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "09",
+    "DIST_DESC_": "CARLOS ANTONIO LOPEZ",
+    "CLAVE": "0709"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "10",
+    "DIST_DESC_": "NATALIO",
+    "CLAVE": "0710"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "11",
+    "DIST_DESC_": "FRAM",
+    "CLAVE": "0711"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "12",
+    "DIST_DESC_": "GENERAL ARTIGAS",
+    "CLAVE": "0712"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "13",
+    "DIST_DESC_": "GENERAL DELGADO",
+    "CLAVE": "0713"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "14",
+    "DIST_DESC_": "HOHENAU",
+    "CLAVE": "0714"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "15",
+    "DIST_DESC_": "JESUS",
+    "CLAVE": "0715"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "16",
+    "DIST_DESC_": "JOSE LEANDRO OVIEDO",
+    "CLAVE": "0716"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "17",
+    "DIST_DESC_": "OBLIGADO",
+    "CLAVE": "0717"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "18",
+    "DIST_DESC_": "MAYOR JULIO DIONISIO OTAÑO",
+    "CLAVE": "0718"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "19",
+    "DIST_DESC_": "SAN COSME Y DAMIAN",
+    "CLAVE": "0719"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "20",
+    "DIST_DESC_": "SAN PEDRO DEL PARANA",
+    "CLAVE": "0720"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "21",
+    "DIST_DESC_": "SAN RAFAEL DEL PARANA",
+    "CLAVE": "0721"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "22",
+    "DIST_DESC_": "TRINIDAD",
+    "CLAVE": "0722"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "23",
+    "DIST_DESC_": "EDELIRA",
+    "CLAVE": "0723"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "24",
+    "DIST_DESC_": "TOMAS ROMERO PEREIRA",
+    "CLAVE": "0724"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "25",
+    "DIST_DESC_": "ALTO VERA",
+    "CLAVE": "0725"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "26",
+    "DIST_DESC_": "LA PAZ",
+    "CLAVE": "0726"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "27",
+    "DIST_DESC_": "YATYTAY",
+    "CLAVE": "0727"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "28",
+    "DIST_DESC_": "SAN JUAN DEL PARANA",
+    "CLAVE": "0728"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "29",
+    "DIST_DESC_": "PIRAPO",
+    "CLAVE": "0729"
+  },
+  {
+    "DPTO": "07",
+    "DPTO_DESC": "ITAPUA",
+    "DISTRITO": "30",
+    "DIST_DESC_": "ITAPUA POTY",
+    "CLAVE": "0730"
+  },
+  {
+    "DPTO": "08",
+    "DPTO_DESC": "MISIONES",
+    "DISTRITO": "01",
+    "DIST_DESC_": "SAN JUAN BAUTISTA DE LAS MISIONES",
+    "CLAVE": "0801"
+  },
+  {
+    "DPTO": "08",
+    "DPTO_DESC": "MISIONES",
+    "DISTRITO": "02",
+    "DIST_DESC_": "AYOLAS",
+    "CLAVE": "0802"
+  },
+  {
+    "DPTO": "08",
+    "DPTO_DESC": "MISIONES",
+    "DISTRITO": "03",
+    "DIST_DESC_": "SAN IGNACIO",
+    "CLAVE": "0803"
+  },
+  {
+    "DPTO": "08",
+    "DPTO_DESC": "MISIONES",
+    "DISTRITO": "04",
+    "DIST_DESC_": "SAN MIGUEL",
+    "CLAVE": "0804"
+  },
+  {
+    "DPTO": "08",
+    "DPTO_DESC": "MISIONES",
+    "DISTRITO": "05",
+    "DIST_DESC_": "SAN PATRICIO",
+    "CLAVE": "0805"
+  },
+  {
+    "DPTO": "08",
+    "DPTO_DESC": "MISIONES",
+    "DISTRITO": "06",
+    "DIST_DESC_": "SANTA MARIA",
+    "CLAVE": "0806"
+  },
+  {
+    "DPTO": "08",
+    "DPTO_DESC": "MISIONES",
+    "DISTRITO": "07",
+    "DIST_DESC_": "SANTA ROSA",
+    "CLAVE": "0807"
+  },
+  {
+    "DPTO": "08",
+    "DPTO_DESC": "MISIONES",
+    "DISTRITO": "08",
+    "DIST_DESC_": "SANTIAGO",
+    "CLAVE": "0808"
+  },
+  {
+    "DPTO": "08",
+    "DPTO_DESC": "MISIONES",
+    "DISTRITO": "09",
+    "DIST_DESC_": "VILLA FLORIDA",
+    "CLAVE": "0809"
+  },
+  {
+    "DPTO": "08",
+    "DPTO_DESC": "MISIONES",
+    "DISTRITO": "10",
+    "DIST_DESC_": "YABEBYRY",
+    "CLAVE": "0810"
+  },
+  {
+    "DPTO": "09",
+    "DPTO_DESC": "PARAGUARI",
+    "DISTRITO": "01",
+    "DIST_DESC_": "PARAGUARI",
+    "CLAVE": "0901"
+  },
+  {
+    "DPTO": "09",
+    "DPTO_DESC": "PARAGUARI",
+    "DISTRITO": "02",
+    "DIST_DESC_": "ACAHAY",
+    "CLAVE": "0902"
+  },
+  {
+    "DPTO": "09",
+    "DPTO_DESC": "PARAGUARI",
+    "DISTRITO": "03",
+    "DIST_DESC_": "CAAPUCU",
+    "CLAVE": "0903"
+  },
+  {
+    "DPTO": "09",
+    "DPTO_DESC": "PARAGUARI",
+    "DISTRITO": "04",
+    "DIST_DESC_": "CABALLERO",
+    "CLAVE": "0904"
+  },
+  {
+    "DPTO": "09",
+    "DPTO_DESC": "PARAGUARI",
+    "DISTRITO": "05",
+    "DIST_DESC_": "CARAPEGUA",
+    "CLAVE": "0905"
+  },
+  {
+    "DPTO": "09",
+    "DPTO_DESC": "PARAGUARI",
+    "DISTRITO": "06",
+    "DIST_DESC_": "ESCOBAR",
+    "CLAVE": "0906"
+  },
+  {
+    "DPTO": "09",
+    "DPTO_DESC": "PARAGUARI",
+    "DISTRITO": "07",
+    "DIST_DESC_": "LA COLMENA",
+    "CLAVE": "0907"
+  },
+  {
+    "DPTO": "09",
+    "DPTO_DESC": "PARAGUARI",
+    "DISTRITO": "08",
+    "DIST_DESC_": "MBUYAPEY",
+    "CLAVE": "0908"
+  },
+  {
+    "DPTO": "09",
+    "DPTO_DESC": "PARAGUARI",
+    "DISTRITO": "09",
+    "DIST_DESC_": "PIRAYU",
+    "CLAVE": "0909"
+  },
+  {
+    "DPTO": "09",
+    "DPTO_DESC": "PARAGUARI",
+    "DISTRITO": "10",
+    "DIST_DESC_": "QUIINDY",
+    "CLAVE": "0910"
+  },
+  {
+    "DPTO": "09",
+    "DPTO_DESC": "PARAGUARI",
+    "DISTRITO": "11",
+    "DIST_DESC_": "QUYQUYHO",
+    "CLAVE": "0911"
+  },
+  {
+    "DPTO": "09",
+    "DPTO_DESC": "PARAGUARI",
+    "DISTRITO": "12",
+    "DIST_DESC_": "ROQUE GONZALEZ DE SANTA CRUZ",
+    "CLAVE": "0912"
+  },
+  {
+    "DPTO": "09",
+    "DPTO_DESC": "PARAGUARI",
+    "DISTRITO": "13",
+    "DIST_DESC_": "SAPUCAI",
+    "CLAVE": "0913"
+  },
+  {
+    "DPTO": "09",
+    "DPTO_DESC": "PARAGUARI",
+    "DISTRITO": "14",
+    "DIST_DESC_": "TEBICUARY-MI",
+    "CLAVE": "0914"
+  },
+  {
+    "DPTO": "09",
+    "DPTO_DESC": "PARAGUARI",
+    "DISTRITO": "15",
+    "DIST_DESC_": "YAGUARON",
+    "CLAVE": "0915"
+  },
+  {
+    "DPTO": "09",
+    "DPTO_DESC": "PARAGUARI",
+    "DISTRITO": "16",
+    "DIST_DESC_": "YBYCUI",
+    "CLAVE": "0916"
+  },
+  {
+    "DPTO": "09",
+    "DPTO_DESC": "PARAGUARI",
+    "DISTRITO": "17",
+    "DIST_DESC_": "YBYTYMI",
+    "CLAVE": "0917"
+  },
+  {
+    "DPTO": "09",
+    "DPTO_DESC": "PARAGUARI",
+    "DISTRITO": "18",
+    "DIST_DESC_": "MARIA ANTONIA",
+    "CLAVE": "0918"
+  },
+  {
+    "DPTO": "10",
+    "DPTO_DESC": "ALTO PARANA",
+    "DISTRITO": "01",
+    "DIST_DESC_": "CIUDAD DEL ESTE",
+    "CLAVE": "1001"
+  },
+  {
+    "DPTO": "10",
+    "DPTO_DESC": "ALTO PARANA",
+    "DISTRITO": "02",
+    "DIST_DESC_": "PRESIDENTE FRANCO",
+    "CLAVE": "1002"
+  },
+  {
+    "DPTO": "10",
+    "DPTO_DESC": "ALTO PARANA",
+    "DISTRITO": "03",
+    "DIST_DESC_": "DOMINGO MARTINEZ DE IRALA",
+    "CLAVE": "1003"
+  },
+  {
+    "DPTO": "10",
+    "DPTO_DESC": "ALTO PARANA",
+    "DISTRITO": "04",
+    "DIST_DESC_": "DR. JUAN LEON MALLORQUIN",
+    "CLAVE": "1004"
+  },
+  {
+    "DPTO": "10",
+    "DPTO_DESC": "ALTO PARANA",
+    "DISTRITO": "05",
+    "DIST_DESC_": "HERNANDARIAS",
+    "CLAVE": "1005"
+  },
+  {
+    "DPTO": "10",
+    "DPTO_DESC": "ALTO PARANA",
+    "DISTRITO": "06",
+    "DIST_DESC_": "ITAKYRY",
+    "CLAVE": "1006"
+  },
+  {
+    "DPTO": "10",
+    "DPTO_DESC": "ALTO PARANA",
+    "DISTRITO": "07",
+    "DIST_DESC_": "JUAN E. O'LEARY",
+    "CLAVE": "1007"
+  },
+  {
+    "DPTO": "10",
+    "DPTO_DESC": "ALTO PARANA",
+    "DISTRITO": "08",
+    "DIST_DESC_": "ÑACUNDAY",
+    "CLAVE": "1008"
+  },
+  {
+    "DPTO": "10",
+    "DPTO_DESC": "ALTO PARANA",
+    "DISTRITO": "09",
+    "DIST_DESC_": "YGUAZU",
+    "CLAVE": "1009"
+  },
+  {
+    "DPTO": "10",
+    "DPTO_DESC": "ALTO PARANA",
+    "DISTRITO": "10",
+    "DIST_DESC_": "LOS CEDRALES",
+    "CLAVE": "1010"
+  },
+  {
+    "DPTO": "10",
+    "DPTO_DESC": "ALTO PARANA",
+    "DISTRITO": "11",
+    "DIST_DESC_": "MINGA GUAZU",
+    "CLAVE": "1011"
+  },
+  {
+    "DPTO": "10",
+    "DPTO_DESC": "ALTO PARANA",
+    "DISTRITO": "12",
+    "DIST_DESC_": "SAN CRISTOBAL",
+    "CLAVE": "1012"
+  },
+  {
+    "DPTO": "10",
+    "DPTO_DESC": "ALTO PARANA",
+    "DISTRITO": "13",
+    "DIST_DESC_": "SANTA RITA",
+    "CLAVE": "1013"
+  },
+  {
+    "DPTO": "10",
+    "DPTO_DESC": "ALTO PARANA",
+    "DISTRITO": "14",
+    "DIST_DESC_": "NARANJAL",
+    "CLAVE": "1014"
+  },
+  {
+    "DPTO": "10",
+    "DPTO_DESC": "ALTO PARANA",
+    "DISTRITO": "15",
+    "DIST_DESC_": "SANTA ROSA DEL MONDAY",
+    "CLAVE": "1015"
+  },
+  {
+    "DPTO": "10",
+    "DPTO_DESC": "ALTO PARANA",
+    "DISTRITO": "16",
+    "DIST_DESC_": "MINGA PORA",
+    "CLAVE": "1016"
+  },
+  {
+    "DPTO": "10",
+    "DPTO_DESC": "ALTO PARANA",
+    "DISTRITO": "17",
+    "DIST_DESC_": "MBARACAYU",
+    "CLAVE": "1017"
+  },
+  {
+    "DPTO": "10",
+    "DPTO_DESC": "ALTO PARANA",
+    "DISTRITO": "18",
+    "DIST_DESC_": "SAN ALBERTO",
+    "CLAVE": "1018"
+  },
+  {
+    "DPTO": "10",
+    "DPTO_DESC": "ALTO PARANA",
+    "DISTRITO": "19",
+    "DIST_DESC_": "IRUÑA",
+    "CLAVE": "1019"
+  },
+  {
+    "DPTO": "10",
+    "DPTO_DESC": "ALTO PARANA",
+    "DISTRITO": "20",
+    "DIST_DESC_": "SANTA FE DEL PARANA",
+    "CLAVE": "1020"
+  },
+  {
+    "DPTO": "10",
+    "DPTO_DESC": "ALTO PARANA",
+    "DISTRITO": "21",
+    "DIST_DESC_": "TAVAPY",
+    "CLAVE": "1021"
+  },
+  {
+    "DPTO": "10",
+    "DPTO_DESC": "ALTO PARANA",
+    "DISTRITO": "22",
+    "DIST_DESC_": "DR. RAUL PEÑA",
+    "CLAVE": "1022"
+  },
+  {
+    "DPTO": "11",
+    "DPTO_DESC": "CENTRAL",
+    "DISTRITO": "01",
+    "DIST_DESC_": "AREGUA",
+    "CLAVE": "1101"
+  },
+  {
+    "DPTO": "11",
+    "DPTO_DESC": "CENTRAL",
+    "DISTRITO": "02",
+    "DIST_DESC_": "CAPIATA",
+    "CLAVE": "1102"
+  },
+  {
+    "DPTO": "11",
+    "DPTO_DESC": "CENTRAL",
+    "DISTRITO": "03",
+    "DIST_DESC_": "FERNANDO DE LA MORA",
+    "CLAVE": "1103"
+  },
+  {
+    "DPTO": "11",
+    "DPTO_DESC": "CENTRAL",
+    "DISTRITO": "04",
+    "DIST_DESC_": "GUARAMBARE",
+    "CLAVE": "1104"
+  },
+  {
+    "DPTO": "11",
+    "DPTO_DESC": "CENTRAL",
+    "DISTRITO": "05",
+    "DIST_DESC_": "ITA",
+    "CLAVE": "1105"
+  },
+  {
+    "DPTO": "11",
+    "DPTO_DESC": "CENTRAL",
+    "DISTRITO": "06",
+    "DIST_DESC_": "ITAUGUA",
+    "CLAVE": "1106"
+  },
+  {
+    "DPTO": "11",
+    "DPTO_DESC": "CENTRAL",
+    "DISTRITO": "07",
+    "DIST_DESC_": "LAMBARE",
+    "CLAVE": "1107"
+  },
+  {
+    "DPTO": "11",
+    "DPTO_DESC": "CENTRAL",
+    "DISTRITO": "08",
+    "DIST_DESC_": "LIMPIO",
+    "CLAVE": "1108"
+  },
+  {
+    "DPTO": "11",
+    "DPTO_DESC": "CENTRAL",
+    "DISTRITO": "09",
+    "DIST_DESC_": "LUQUE",
+    "CLAVE": "1109"
+  },
+  {
+    "DPTO": "11",
+    "DPTO_DESC": "CENTRAL",
+    "DISTRITO": "10",
+    "DIST_DESC_": "MARIANO ROQUE ALONSO",
+    "CLAVE": "1110"
+  },
+  {
+    "DPTO": "11",
+    "DPTO_DESC": "CENTRAL",
+    "DISTRITO": "11",
+    "DIST_DESC_": "NUEVA ITALIA",
+    "CLAVE": "1111"
+  },
+  {
+    "DPTO": "11",
+    "DPTO_DESC": "CENTRAL",
+    "DISTRITO": "12",
+    "DIST_DESC_": "ÑEMBY",
+    "CLAVE": "1112"
+  },
+  {
+    "DPTO": "11",
+    "DPTO_DESC": "CENTRAL",
+    "DISTRITO": "13",
+    "DIST_DESC_": "SAN ANTONIO",
+    "CLAVE": "1113"
+  },
+  {
+    "DPTO": "11",
+    "DPTO_DESC": "CENTRAL",
+    "DISTRITO": "14",
+    "DIST_DESC_": "SAN LORENZO",
+    "CLAVE": "1114"
+  },
+  {
+    "DPTO": "11",
+    "DPTO_DESC": "CENTRAL",
+    "DISTRITO": "15",
+    "DIST_DESC_": "VILLA ELISA",
+    "CLAVE": "1115"
+  },
+  {
+    "DPTO": "11",
+    "DPTO_DESC": "CENTRAL",
+    "DISTRITO": "16",
+    "DIST_DESC_": "VILLETA",
+    "CLAVE": "1116"
+  },
+  {
+    "DPTO": "11",
+    "DPTO_DESC": "CENTRAL",
+    "DISTRITO": "17",
+    "DIST_DESC_": "YPACARAI",
+    "CLAVE": "1117"
+  },
+  {
+    "DPTO": "11",
+    "DPTO_DESC": "CENTRAL",
+    "DISTRITO": "18",
+    "DIST_DESC_": "YPANE",
+    "CLAVE": "1118"
+  },
+  {
+    "DPTO": "11",
+    "DPTO_DESC": "CENTRAL",
+    "DISTRITO": "19",
+    "DIST_DESC_": "J. AUGUSTO SALDIVAR",
+    "CLAVE": "1119"
+  },
+  {
+    "DPTO": "12",
+    "DPTO_DESC": "ÑEEMBUCU",
+    "DISTRITO": "01",
+    "DIST_DESC_": "PILAR",
+    "CLAVE": "1201"
+  },
+  {
+    "DPTO": "12",
+    "DPTO_DESC": "ÑEEMBUCU",
+    "DISTRITO": "02",
+    "DIST_DESC_": "ALBERDI",
+    "CLAVE": "1202"
+  },
+  {
+    "DPTO": "12",
+    "DPTO_DESC": "ÑEEMBUCU",
+    "DISTRITO": "03",
+    "DIST_DESC_": "CERRITO",
+    "CLAVE": "1203"
+  },
+  {
+    "DPTO": "12",
+    "DPTO_DESC": "ÑEEMBUCU",
+    "DISTRITO": "04",
+    "DIST_DESC_": "DESMOCHADOS",
+    "CLAVE": "1204"
+  },
+  {
+    "DPTO": "12",
+    "DPTO_DESC": "ÑEEMBUCU",
+    "DISTRITO": "05",
+    "DIST_DESC_": "GRAL. JOSE EDUVIGIS DIAZ",
+    "CLAVE": "1205"
+  },
+  {
+    "DPTO": "12",
+    "DPTO_DESC": "ÑEEMBUCU",
+    "DISTRITO": "06",
+    "DIST_DESC_": "GUAZU CUA",
+    "CLAVE": "1206"
+  },
+  {
+    "DPTO": "12",
+    "DPTO_DESC": "ÑEEMBUCU",
+    "DISTRITO": "07",
+    "DIST_DESC_": "HUMAITA",
+    "CLAVE": "1207"
+  },
+  {
+    "DPTO": "12",
+    "DPTO_DESC": "ÑEEMBUCU",
+    "DISTRITO": "08",
+    "DIST_DESC_": "ISLA UMBU",
+    "CLAVE": "1208"
+  },
+  {
+    "DPTO": "12",
+    "DPTO_DESC": "ÑEEMBUCU",
+    "DISTRITO": "09",
+    "DIST_DESC_": "LAURELES",
+    "CLAVE": "1209"
+  },
+  {
+    "DPTO": "12",
+    "DPTO_DESC": "ÑEEMBUCU",
+    "DISTRITO": "10",
+    "DIST_DESC_": "MAYOR JOSE DE JESUS MARTINEZ",
+    "CLAVE": "1210"
+  },
+  {
+    "DPTO": "12",
+    "DPTO_DESC": "ÑEEMBUCU",
+    "DISTRITO": "11",
+    "DIST_DESC_": "PASO DE PATRIA",
+    "CLAVE": "1211"
+  },
+  {
+    "DPTO": "12",
+    "DPTO_DESC": "ÑEEMBUCU",
+    "DISTRITO": "12",
+    "DIST_DESC_": "SAN JUAN BAUTISTA DE ÑEEMBUCU",
+    "CLAVE": "1212"
+  },
+  {
+    "DPTO": "12",
+    "DPTO_DESC": "ÑEEMBUCU",
+    "DISTRITO": "13",
+    "DIST_DESC_": "TACUARAS",
+    "CLAVE": "1213"
+  },
+  {
+    "DPTO": "12",
+    "DPTO_DESC": "ÑEEMBUCU",
+    "DISTRITO": "14",
+    "DIST_DESC_": "VILLA FRANCA",
+    "CLAVE": "1214"
+  },
+  {
+    "DPTO": "12",
+    "DPTO_DESC": "ÑEEMBUCU",
+    "DISTRITO": "15",
+    "DIST_DESC_": "VILLA OLIVA",
+    "CLAVE": "1215"
+  },
+  {
+    "DPTO": "12",
+    "DPTO_DESC": "ÑEEMBUCU",
+    "DISTRITO": "16",
+    "DIST_DESC_": "VILLALBIN",
+    "CLAVE": "1216"
+  },
+  {
+    "DPTO": "13",
+    "DPTO_DESC": "AMAMBAY",
+    "DISTRITO": "01",
+    "DIST_DESC_": "PEDRO JUAN CABALLERO",
+    "CLAVE": "1301"
+  },
+  {
+    "DPTO": "13",
+    "DPTO_DESC": "AMAMBAY",
+    "DISTRITO": "02",
+    "DIST_DESC_": "BELLA VISTA",
+    "CLAVE": "1302"
+  },
+  {
+    "DPTO": "13",
+    "DPTO_DESC": "AMAMBAY",
+    "DISTRITO": "03",
+    "DIST_DESC_": "CAPITAN BADO",
+    "CLAVE": "1303"
+  },
+  {
+    "DPTO": "13",
+    "DPTO_DESC": "AMAMBAY",
+    "DISTRITO": "04",
+    "DIST_DESC_": "ZANJA PYTA",
+    "CLAVE": "1304"
+  },
+  {
+    "DPTO": "13",
+    "DPTO_DESC": "AMAMBAY",
+    "DISTRITO": "05",
+    "DIST_DESC_": "KARAPAI",
+    "CLAVE": "1305"
+  },
+  {
+    "DPTO": "13",
+    "DPTO_DESC": "AMAMBAY",
+    "DISTRITO": "06",
+    "DIST_DESC_": "CERRO CORA",
+    "CLAVE": "1306"
+  },
+  {
+    "DPTO": "14",
+    "DPTO_DESC": "CANINDEYU",
+    "DISTRITO": "01",
+    "DIST_DESC_": "SALTO DEL GUAIRA",
+    "CLAVE": "1401"
+  },
+  {
+    "DPTO": "14",
+    "DPTO_DESC": "CANINDEYU",
+    "DISTRITO": "02",
+    "DIST_DESC_": "CORPUS CHRISTI",
+    "CLAVE": "1402"
+  },
+  {
+    "DPTO": "14",
+    "DPTO_DESC": "CANINDEYU",
+    "DISTRITO": "03",
+    "DIST_DESC_": "VILLA CURUGUATY",
+    "CLAVE": "1403"
+  },
+  {
+    "DPTO": "14",
+    "DPTO_DESC": "CANINDEYU",
+    "DISTRITO": "04",
+    "DIST_DESC_": "VILLA YGATIMI",
+    "CLAVE": "1404"
+  },
+  {
+    "DPTO": "14",
+    "DPTO_DESC": "CANINDEYU",
+    "DISTRITO": "05",
+    "DIST_DESC_": "ITANARA",
+    "CLAVE": "1405"
+  },
+  {
+    "DPTO": "14",
+    "DPTO_DESC": "CANINDEYU",
+    "DISTRITO": "06",
+    "DIST_DESC_": "YPEJHU",
+    "CLAVE": "1406"
+  },
+  {
+    "DPTO": "14",
+    "DPTO_DESC": "CANINDEYU",
+    "DISTRITO": "07",
+    "DIST_DESC_": "FRANCISCO CABALLERO ALVAREZ",
+    "CLAVE": "1407"
+  },
+  {
+    "DPTO": "14",
+    "DPTO_DESC": "CANINDEYU",
+    "DISTRITO": "08",
+    "DIST_DESC_": "KATUETE",
+    "CLAVE": "1408"
+  },
+  {
+    "DPTO": "14",
+    "DPTO_DESC": "CANINDEYU",
+    "DISTRITO": "09",
+    "DIST_DESC_": "LA PALOMA DEL ESPIRITU SANTO",
+    "CLAVE": "1409"
+  },
+  {
+    "DPTO": "14",
+    "DPTO_DESC": "CANINDEYU",
+    "DISTRITO": "10",
+    "DIST_DESC_": "NUEVA ESPERANZA",
+    "CLAVE": "1410"
+  },
+  {
+    "DPTO": "14",
+    "DPTO_DESC": "CANINDEYU",
+    "DISTRITO": "11",
+    "DIST_DESC_": "YASY KAÃ‘Y",
+    "CLAVE": "1411"
+  },
+  {
+    "DPTO": "14",
+    "DPTO_DESC": "CANINDEYU",
+    "DISTRITO": "12",
+    "DIST_DESC_": "YBYRAROBANA",
+    "CLAVE": "1412"
+  },
+  {
+    "DPTO": "14",
+    "DPTO_DESC": "CANINDEYU",
+    "DISTRITO": "13",
+    "DIST_DESC_": "YBY PYTA",
+    "CLAVE": "1413"
+  },
+  {
+    "DPTO": "14",
+    "DPTO_DESC": "CANINDEYU",
+    "DISTRITO": "14",
+    "DIST_DESC_": "MARACANA",
+    "CLAVE": "1414"
+  },
+  {
+    "DPTO": "14",
+    "DPTO_DESC": "CANINDEYU",
+    "DISTRITO": "15",
+    "DIST_DESC_": "PUERTO ADELA",
+    "CLAVE": "1415"
+  },
+  {
+    "DPTO": "14",
+    "DPTO_DESC": "CANINDEYU",
+    "DISTRITO": "16",
+    "DIST_DESC_": "LAUREL",
+    "CLAVE": "1416"
+  },
+  {
+    "DPTO": "15",
+    "DPTO_DESC": "PRESIDENTE HAYES",
+    "DISTRITO": "02",
+    "DIST_DESC_": "BENJAMIN ACEVAL",
+    "CLAVE": "1502"
+  },
+  {
+    "DPTO": "15",
+    "DPTO_DESC": "PRESIDENTE HAYES",
+    "DISTRITO": "03",
+    "DIST_DESC_": "PUERTO PINASCO",
+    "CLAVE": "1503"
+  },
+  {
+    "DPTO": "15",
+    "DPTO_DESC": "PRESIDENTE HAYES",
+    "DISTRITO": "04",
+    "DIST_DESC_": "VILLA HAYES",
+    "CLAVE": "1504"
+  },
+  {
+    "DPTO": "15",
+    "DPTO_DESC": "PRESIDENTE HAYES",
+    "DISTRITO": "05",
+    "DIST_DESC_": "NANAWA",
+    "CLAVE": "1505"
+  },
+  {
+    "DPTO": "15",
+    "DPTO_DESC": "PRESIDENTE HAYES",
+    "DISTRITO": "06",
+    "DIST_DESC_": "JOSE FALCON",
+    "CLAVE": "1506"
+  },
+  {
+    "DPTO": "15",
+    "DPTO_DESC": "PRESIDENTE HAYES",
+    "DISTRITO": "07",
+    "DIST_DESC_": "TTE 1RO MANUEL IRALA FERNANDEZ",
+    "CLAVE": "1507"
+  },
+  {
+    "DPTO": "15",
+    "DPTO_DESC": "PRESIDENTE HAYES",
+    "DISTRITO": "08",
+    "DIST_DESC_": "TENIENTE ESTEBAN MARTINEZ",
+    "CLAVE": "1508"
+  },
+  {
+    "DPTO": "15",
+    "DPTO_DESC": "PRESIDENTE HAYES",
+    "DISTRITO": "09",
+    "DIST_DESC_": "GENERAL JOSE MARIA BRUGUEZ",
+    "CLAVE": "1509"
+  },
+  {
+    "DPTO": "15",
+    "DPTO_DESC": "PRESIDENTE HAYES",
+    "DISTRITO": "10",
+    "DIST_DESC_": "CAMPO ACEVAL",
+    "CLAVE": "1510"
+  },
+  {
+    "DPTO": "15",
+    "DPTO_DESC": "PRESIDENTE HAYES",
+    "DISTRITO": "11",
+    "DIST_DESC_": "NUEVA ASUNCION",
+    "CLAVE": "1511"
+  },
+  {
+    "DPTO": "16",
+    "DPTO_DESC": "BOQUERON",
+    "DISTRITO": "02",
+    "DIST_DESC_": "MARISCAL JOSE FELIX ESTIGARRIBIA",
+    "CLAVE": "1602"
+  },
+  {
+    "DPTO": "16",
+    "DPTO_DESC": "BOQUERON",
+    "DISTRITO": "04",
+    "DIST_DESC_": "FILADELFIA",
+    "CLAVE": "1604"
+  },
+  {
+    "DPTO": "16",
+    "DPTO_DESC": "BOQUERON",
+    "DISTRITO": "05",
+    "DIST_DESC_": "LOMA PLATA",
+    "CLAVE": "1605"
+  },
+  {
+    "DPTO": "16",
+    "DPTO_DESC": "BOQUERON",
+    "DISTRITO": "06",
+    "DIST_DESC_": "BOQUERON",
+    "CLAVE": "1606"
+  },
+  {
+    "DPTO": "17",
+    "DPTO_DESC": "ALTO PARAGUAY",
+    "DISTRITO": "01",
+    "DIST_DESC_": "FUERTE OLIMPO",
+    "CLAVE": "1701"
+  },
+  {
+    "DPTO": "17",
+    "DPTO_DESC": "ALTO PARAGUAY",
+    "DISTRITO": "02",
+    "DIST_DESC_": "PUERTO CASADO",
+    "CLAVE": "1702"
+  },
+  {
+    "DPTO": "17",
+    "DPTO_DESC": "ALTO PARAGUAY",
+    "DISTRITO": "04",
+    "DIST_DESC_": "BAHIA NEGRA",
+    "CLAVE": "1704"
+  },
+  {
+    "DPTO": "17",
+    "DPTO_DESC": "ALTO PARAGUAY",
+    "DISTRITO": "05",
+    "DIST_DESC_": "CARMELO PERALTA",
+    "CLAVE": "1705"
+  }
+]

@@ -1,0 +1,27 @@
+<%= form_with(model: code) do |form| %>
+  <% if code.errors.any? %>
+    <div class="alert alert-danger alert-dismissible" role="alert">
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      <div class="alert-message">
+        <strong>Error.</strong> No pudo guardarse debido a los siguientes errores
+      </div>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :value, class: 'form-label' %>
+    <%= form.text_field :value, class: 'form-control' %>
+  </div>
+
+      <div class="field">
+    <%= form.label :product_id, "Producto", class: 'form-label' %>
+    <%= form.collection_select :product_id, Product.all, :id, :name, { prompt: "Selecciona un producto" }, { class: "form-control selectize" } %>
+  </div>
+
+  <div class="actions">
+    
+    <%= button_tag( :class => "btn btn-primary mt-2") do %>
+      <i class="fas fa-fw fa-save"></i> Guardar
+      <% end %>
+  </div>
+<% end %>

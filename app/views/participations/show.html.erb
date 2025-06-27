@@ -1,0 +1,30 @@
+<div class="mb-3">
+  <h1 class="h3 d-inline align-middle">Participación</h1>
+</div>
+<div class="row">
+  <div class="col-xl-12">
+    <div class="card">
+      <div class="card-body">
+        <table class="table table-hover table-striped table-sm mt-2 mb-6">
+          <tbody>
+            <tr>
+              <th width=200><%= icon('id') %>Id</th>
+              <td><%= @participation.id %></td>
+            </tr>
+            <tr>
+              <th width=200><%= icon('id') %>Contacto</th>
+              <td><%= @participation.participant.contact %></td>
+            </tr>
+            <tr>
+              <th><%= icon('text') %>Nombre completo y CI</th>
+              <td><%= @participation.participant.document %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<%= link_to(participations_path, class: 'btn btn-primary btn-lg') do %>
+  <i class="fas fa-fw fa-arrow-left"></i> Volver a la lista
+<% end %>

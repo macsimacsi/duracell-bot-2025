@@ -1,0 +1,106 @@
+
+<div class="mb-3">
+  <h1 class="h3 d-inline align-middle">Roles</h1>
+</div>
+<div class="row">
+  <div class="col-xl-8">
+    <div class="card">
+      <div class="card-header pb-0">
+        <div class="card-actions float-end">
+          <div class="dropdown show">
+            <a href="#" data-bs-toggle="dropdown" data-bs-display="static">
+              <i class="align-middle" data-feather="more-horizontal"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end">
+              <%= link_to "Nuevo", new_role_path, class: 'dropdown-item' %>
+              <%= link_to "Buscar", nil, class: 'dropdown-item', id: 'gd-do-search' %>
+            </div>
+          </div>
+        </div>
+        <h5 class="card-title mb-0">Lista de roles</h5>
+      </div>
+      <div id="gd-search-container" class="card-header pb-0 gd-admin-search<%= " gd-display-none" if !params[:commit] %>">
+        <%= search_form_for @q,  class: 'row row-cols-md-auto align-items-center' do |f| %>
+          <div class="col-12">
+            <%= f.label :searchable_content_cont, class: 'visually-hidden' %>
+            <%= f.search_field :searchable_content_cont, class: 'form-control mb-2 me-sm-2' %>
+          </div>
+          <div class="col-12">
+            <%= f.submit 'Buscar', class: 'btn btn-primary mb-2' %>
+            <i id="gd-search-close" class="fas fa-fw fa-window-close ms-2"></i>
+            <%= link_to "Mostrar todos", roles_path %>
+          </div>
+        <% end %>
+      </div>
+      <div class= "card-body">
+        <div class="table-responsive">
+          <table class="table table-hover" style="width:100%">
+            <thead>
+              <tr>
+                <th><%= icon('id') %><%= sortable 'id', 'Id' %></i></th>
+              <th><%= icon('text') %><%= sortable 'name', 'Nombre' %></th>
+              <th class='gd-vertical-middle'><%= icon('text') %>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @roles.each do |role| %>
+              <tr>
+                <td><%= role.id %></td>
+                <td><%= role.name %></td>
+                <td class="table-action">
+                  <%= link_to role  do %>
+                    <i class="align-middle" data-feather="eye"></i>
+                  <% end %>
+                  <%= link_to edit_role_path(role)  do %>
+                    <i class="align-middle" data-feather="edit-2"></i>
+                  <% end %>
+                  <%= link_to role, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                    <i class="align-middle" data-feather="trash"></i>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-5">
+          <div class="dataTables_info" id="datatables-column-search-text-inputs_info" role="status" aria-live="polite">
+            <%== pagy_info  @pagy %>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-7">
+          <div class="dataTables_paginate paging_simple_numbers" id="datatables-column-search-text-inputs_paginate">
+            <%== pagy_bootstrap_nav @pagy %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<%= button_to(new_role_path, class: 'btn btn-primary btn-lg', remote: false, method: :get) do %>
+  <i class="fas fa-fw fa-plus"></i> Nuevo
+<% end %>
+<script>
+  $( document ).ready(function() {
+
+  	const search = $('#gd-search-container');
+
+  	$( "#gd-search-close" ).click(function() {
+  		//console.log(g( "Search will close." );
+  		search.hide(350);
+  	});
+
+  	$( "#gd-do-search" ).click(function( event ) {
+  		//console.log(g( "Search will open." );
+  		search.show(350);
+  		event.preventDefault();
+  	});
+
+  });
+
+  <% if params[:q] && params[:q][:searchable_content_cont] %>
+  	$('#q_searchable_content_cont').val('<%= params[:q][:searchable_content_cont] %>');
+  <% end %>
+</script>

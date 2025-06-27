@@ -1,0 +1,106 @@
+
+					<div class="mb-3">
+						<h1 class="h3 d-inline align-middle">Llamada a la API: <%= @api_call.url %></h1>
+
+					</div>
+
+          <div class="row">
+						<div class="col-xl-4">
+							<div class="card">
+								<div class="table-responsive">
+
+									<table class="table table-hover table-striped table-sm mt-2 mb-4">
+										<tbody>
+											<tr>
+												<th><%= icon('date') %> Fecha / Hora</th>
+												<td class='text-end'><%= @api_call.created_at %></td>
+											</tr>
+											<tr>
+												<th><%= icon('text') %> Método</th>
+												<td class='text-end'><%= @api_call.method %></td>
+											</tr>
+											<tr>
+												<th><%= icon('code') %> Código de respuesta</th>
+												<td class='text-end'><%= api_call_response_code(@api_call) %></td>
+											</tr>
+											<tr>
+												<th><%= icon('clock') %> Tiempo de respuesta <span class='gd-small-text'>ms</span></th>
+												<td class='text-end'><%= @api_call.response_time %></td>
+											</tr>
+											<tr>
+												<th><%= icon('scale') %> Tamaño de la respuesta <span class='gd-small-text'>bytes</span></th>
+												<td class='text-end'><%= @api_call.response_size %></td>
+											</tr>
+											<tr>
+												<th><%= icon('origin') %> Origen</th>
+												<td class='text-end'><%= api_call_origin(@api_call) %></td>
+											</tr>
+									</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xl-8">
+							<div class="card">
+								<div class="card-header">
+									<h5 class="card-title mb-0">Envío</h5>
+                  <br>
+                  <p>
+                    <%= @api_call.data.nil? ? "Vacío" : @api_call.data %>
+                  </p>
+
+									<h5 class="card-title mb-0">Respuesta</h5>
+                  <br>
+                  <p id='gd-api-call-response'>
+                    <%= @api_call.response_data %>
+                  </p>
+                  <p id='gd-api-call-response-formatted'>
+                  </p>
+								</div>
+              </div>
+
+
+
+            </div>
+
+          </div>
+
+          <%= link_to(api_calls_path, class: 'btn btn-primary btn-lg') do %>
+            <i class="fas fa-fw fa-arrow-left"></i> Volver a la lista
+          <% end %>
+
+
+       <script>
+        $(function() {
+            var obj = JSON.parse(document.getElementById('gd-api-call-response').innerHTML);
+            var str = JSON.stringify(obj, undefined, 4);
+            var output = document.getElementById('gd-api-call-response-formatted');
+            output.innerHTML = "<pre>" + syntaxHighlight(str) + "</pre>";
+        });
+
+        function syntaxHighlight(json) {
+            json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+                var cls = 'number';
+                if (/^"/.test(match)) {
+                    if (/:$/.test(match)) {
+                        cls = 'key';
+                    } else {
+                        cls = 'string';
+                    }
+                } else if (/true|false/.test(match)) {
+                    cls = 'boolean';
+                } else if (/null/.test(match)) {
+                    cls = 'null';
+                }
+                return '<span class="' + cls + '">' + match + '</span>';
+            });
+        }
+
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+          return new bootstrap.Popover(popoverTriggerEl)
+        })
+
+       </script>

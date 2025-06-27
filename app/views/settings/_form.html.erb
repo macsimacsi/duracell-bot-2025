@@ -1,0 +1,11 @@
+<%= simple_form_for  @setting do |form| %>
+  <%= form.input :name %>
+  <%= form.input :active %>
+  <%= form.input :date_start, as: :datetime, html5: true, input_html: { class: 'form-control' } %>
+  <%= form.input :date_end, as: :datetime, html5: true, input_html: { class: 'form-control' } %>
+  
+
+  <div class="actions">
+    <%= form.submit 'Guardar', class:'btn btn-outline-success' %>
+  </div>
+<% end %>

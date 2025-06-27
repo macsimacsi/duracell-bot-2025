@@ -1,0 +1,122 @@
+<div class="mb-3">
+  <h1 class="h3 d-inline align-middle">Codigos</h1>
+</div>
+<div class="row">
+  <div class="col-xl-12">
+    <div class="card">
+      <div class="card-header pb-0">
+        <div class="card-actions float-end">
+          <div class="dropdown show">
+            <a href="#" data-bs-toggle="dropdown" data-bs-display="static">
+              <i class="align-middle" data-feather="more-horizontal"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end">
+              <%= link_to "Nuevo", new_code_path, class: 'dropdown-item' %>
+              <%= link_to "Buscar", nil, class: 'dropdown-item', id: 'gd-do-search' %>
+            </div>
+          </div>
+        </div>
+        <h5 class="card-title mb-0">Lista de codeos</h5>
+      </div>
+      <div id="gd-search-container" class="card-header pb-0 gd-admin-search<%= " gd-display-none" if !params[:commit] %>">
+
+        <%= search_form_for @q, class: 'row row-cols-md-auto align-items-center' do |f| %>
+
+          <div class="col-12">
+            <%= f.label :searchable_content_cont, class: 'visually-hidden' %>
+            <%= f.search_field :searchable_content_cont, class: 'form-control mb-2 me-sm-2' %>
+          </div>
+          <div class="col-12">
+            <div class="select-tag">
+              Mostrar <%= select_tag :limit, options_for_select([5, 10, 25, 50, 100, 1000], params[:limit] || 10) %>
+              registros por página
+            </div>
+          </div>
+
+          <div class="col-12">
+            <%= f.submit 'Buscar', class: 'btn btn-primary mb-2' %>
+            <i id="gd-search-close" class="fas fa-fw fa-window-close ms-2"></i>
+            <%= link_to "Limpiar", codes_path %>
+          </div>
+
+        <% end %>
+
+      </div>
+      <div class="card-body">
+        <table class="table table-hover" style="width:100%">
+          <thead>
+          <tr>
+            <th><%= icon('id') %><%= sort_link @q, 'id', 'Id' %></th>
+            <th><%= icon('text') %><%= sort_link @q, 'value', 'Valor' %></th>
+            <th><%= icon('text') %><%= sort_link @q, 'product', 'Producto' %></th>
+            <th><%= icon('text') %><%= sort_link @q, 'used', 'Utilizado?' %></th>
+            <th><%= icon('text') %>Acciones</th>
+          </tr>
+          </thead>
+          <tbody>
+          <% @codes.each do |code| %>
+            <tr>
+              <td><%= code.id %></td>
+              <td><%= code.value %></td>
+              <td><%= code.product.name %></td>
+              <td><%= span_status code.used, %w[SI NO] %></td>
+              <td class="table-action">
+                <%= link_to code_path(code) do %>
+                  <i class="align-middle" data-feather="eye"></i>
+                <% end %>
+                <%= link_to edit_code_path(code) do %>
+                  <i class="align-middle" data-feather="edit-2"></i>
+                <% end %>
+                <%= link_to code, method: :delete, data: { confirm: 'Estás seguro?' } do %>
+                  <i class="align-middle" data-feather="trash"></i>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+
+        <div class="row">
+          <div class="col-sm-12 col-md-5">
+            <div class="dataTables_info" id="datatables-column-search-text-inputs_info" role="status" aria-live="polite">
+              <%= page_entries_info @codes %>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-7">
+            <div class="dataTables_paginate paging_simple_numbers" id="datatables-column-search-text-inputs_paginate">
+              <%= paginate @codes, window: 3 %>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= button_to(new_code_path, class: 'btn btn-primary btn-lg', remote: false, method: :get) do %>
+  <i class="fas fa-fw fa-plus"></i> Nuevo
+<% end %>
+
+<script>
+    $(document).ready(function () {
+
+        const search = $('#gd-search-container');
+
+        $("#gd-search-close").click(function () {
+            search.hide(350);
+        });
+
+        $("#gd-do-search").click(function (event) {
+            search.show(350);
+            event.preventDefault();
+        });
+
+    });
+
+    <% if params[:q] && params[:q][:searchable_content_cont] %>
+    $('#q_searchable_content_cont').val('<%= params[:q][:searchable_content_cont] %>');
+    <% end %>
+
+</script>
+

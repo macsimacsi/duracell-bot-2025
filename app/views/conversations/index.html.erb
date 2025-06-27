@@ -1,0 +1,87 @@
+<div class="mb-3">
+  <div class="d-flex justify-content-between flex-wrap">
+    <h1 class="h3 d-inline align-middle">Conversaciones</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header pb-0">
+        <div id="gd-search-container">
+          <%= search_form_for @q, class: 'row row-cols-md-auto align-items-center' do |f| %>
+            <div class="col-12">
+              <%= f.label :search_cont, class: 'visually-hidden' %>
+              <%= f.search_field :search_cont, class: 'form-control mb-2 me-sm-2' %>
+            </div>
+            <div class="col-12">
+              <%= f.submit 'Buscar', class: 'btn btn-primary mb-2' %>
+              <i id="gd-search-close" class="fas fa-fw fa-window-close ms-2"></i>
+              <%= link_to "Limpiar", conversations_path %>
+            </div>
+          <% end %>
+        </div>
+        <div class="card-body">
+          <table class="table table-hover" style="width:100%">
+            <thead>
+            <tr>
+              <th><%= icon('key') %><%= sort_link @q, 'id' %></i></th>
+              <th><%= icon('address-card') %><%= sort_link @q, 'contact' %></i></th>
+              <th><%= icon('phone') %><%= sort_link @q, 'last_message_id' %></i></th>
+              <th><%= icon('phone') %><%= sort_link @q, 'last_message_at' %></i></th>
+              <th><%= icon('filter') %> Acciones</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% @conversations.each do |conversation| %>
+              <tr>
+                <td><%= conversation.id %></td>
+                <td><%= conversation.contact %></td>
+                <td><%= conversation.last_message&.body || "<#{conversation.last_message&.kind}>" %></td>
+                <td><%= strftime conversation.last_message_at, '%Y-%m-%d %H:%M' %></td>
+                <td class="table-action">
+                  <%= link_to conversation_path(conversation) do %>
+                    <i class="align-middle" data-feather="eye"></i>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+          <div class="row">
+            <div class="col-sm-12 col-md-5">
+              <div class="dataTables_info" id="datatables-column-search-text-inputs_info" role="status" aria-live="polite">
+                <%= page_entries_info @conversations %>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-7">
+              <div class="dataTables_paginate paging_simple_numbers" id="datatables-column-search-text-inputs_paginate">
+                <%= paginate @conversations, window: 3 %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    $(document).ready(function () {
+
+        const search = $('#gd-search-container');
+
+        $("#gd-search-close").click(function () {
+            search.hide(350);
+        });
+
+        $("#gd-do-search").click(function (event) {
+            search.show(350);
+            event.preventDefault();
+        });
+
+    });
+
+    <% if params[:q] && params[:q][:search_cont] %>
+    $('#q_search_cont').val('<%= params[:q][:search_cont] %>');
+    <% end %>
+</script>
+

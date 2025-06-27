@@ -1,0 +1,32 @@
+<%= form_with(model: api_call) do |form| %>
+  <% if api_call.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(api_call.errors.count, "error") %> prohibited this api_call from being saved:</h2>
+
+      <ul>
+        <% api_call.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :response_code %>
+    <%= form.text_field :response_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :response_time %>
+    <%= form.number_field :response_time %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,60 @@
+<% content_for :head_content do %>
+  <style>
+    .gd-custom-login-button {
+        color: white !important;
+        background-color: #e20612 !important;
+    }
+  </style>
+<% end %>
+<main class="d-flex w-100 h-100">
+  <div class="container d-flex flex-column">
+    <div class="row vh-100">
+      <div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
+        <div class="d-table-cell align-middle">
+          <div class="card" style='border: 3px solid #A4ABA9; border-radius: 20px'>
+            <div class="card-body">
+              <div class="m-sm-4">
+                <div class="text-center">
+                  <%= image_tag 'logo.png', class:"img-fluid", width:"120" %>
+                </div>
+                <br>
+                <br>
+                <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                  <% flash.each do |type, message| %>
+                    <% next unless message.is_a?(String) %>
+                    <div class="alert alert-<%= alert_type(type) %> alert-dismissible fade show p-2" role="alert">
+                      <%= message %>
+                    </div>
+                  <% end %>
+                  <div class="input-group mb-2 me-sm-2" style='min-height: 50px;'>
+                    <div class="input-group-text" style='background-color: #fff; border-top-left-radius: 10px; border-bottom-left-radius: 10px'>
+                      <%= image_tag '/img/email.png', width: '30px', style: '' %>
+                    </div>
+                    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: 'Correo electrónico', style: 'border-left: none; background-color: #fff;  border-top-right-radius: 10px; border-bottom-right-radius: 10px; padding: 20px; color: black !important;' %>
+                  </div>
+                  <br>
+                  <div class="input-group mb-2 me-sm-2" style='min-height: 50px;'>
+                    <div class="input-group-text" style='background-color: #fff; border-top-left-radius: 10px; border-bottom-left-radius: 10px;'>
+                      <%= image_tag '/img/password.png', width: '30px', style: '' %>
+                    </div>
+                    <%= f.password_field :password, autofocus: true, autocomplete: "password", class: "form-control", placeholder: 'Contraseña', style: 'border-left: none; background-color: #fff;  border-top-right-radius: 10px; border-bottom-right-radius: 10px; padding: 20px; color: black !important;' %>
+                  </div>
+                  <%= render "devise/shared/links" %>
+                  <div class="d-grid gap-2 mt-5">
+                    <%= f.submit "Ingresar", class: 'btn btn-lg btn-primary  gd-custom-login-button' %>
+                  </div>
+                  <div class="d-flex justify-content-center align-items-start mt-3">
+                    <span>Desarrollado por</span>
+                    <a class="text-black fw-bold ms-2" href="https://www.gdigital.com.py/">
+                      <%= image_tag '/img/gdigital.png', height: '17px' %>
+                    </a>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

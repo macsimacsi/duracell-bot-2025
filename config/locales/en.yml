@@ -1,0 +1,235 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+en:
+  hello: "Hello world"
+  tv: Televisión
+  radio: Radio
+  newspaper: Periódico
+  website: Sitio web
+  lunes: Lunes
+  martes: Martes
+  miercoles: Miércoles
+  jueves: Jueves
+  viernes: Viernes
+  sabado: Sábado
+  domingo: Domingo
+  printed: Impreso
+  digital: Digital
+  new_: Pendiente
+  confirmed_: Confirmado
+  delivered_: Entregado
+  expired_: Expirado
+  helpers:
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "Ningún/Ninguna %{entry_name} encontrados/das"
+          one: "Mostrando <b>1</b> %{entry_name}"
+          other: "Mostrando <b>todos/as los/as %{count}</b> %{entry_name}"
+      more_pages:
+        display_entries: "Mostrando %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> de <b>%{total}</b> en total"  
+  activerecord:
+    models:
+      admin:
+        one: Administrador
+        other: Administradores
+      seller:
+        one: Ejecutivo comercial
+        other: Ejecutivos comerciales 
+      company:
+        one: Medio
+        other: Medios    
+      program:
+        one: Programa
+        other: Programas    
+      state:
+        one: Departamento
+        other: Departamentos
+      gas_station:
+        one: Estación de servicio
+        other: Estaciones de servicios
+      store:
+        one: Comercio
+        other: Comercios
+      aliance:
+        one: Alianza
+        other: Alianzas
+      coupon:
+        one: Cupón
+        other: Cupones
+      product:
+        one: Producto
+        other: Productos
+      category:
+        one: Categoría
+        other: Categorías
+      code:
+        one: Código
+        other: Códigos
+      conversation:
+        one: Conversación
+        other: Conversaciones
+    submit:
+      admin:
+        create: "Guardar"
+        update: "Actualizar"
+      company:
+        create: "Guardar"
+        update: "Actualizar"
+      program:
+        create: "Guardar"
+        update: "Actualizar" 
+      state:
+        create: "Guardar"
+        update: "Actualizar"
+      gas_station:
+        create: "Guardar"
+        update: "Actualizar"  
+      store:
+        create: "Guardar"
+        update: "Actualizar"  
+      alianza:
+        create: "Guardar"
+        update: "Actualizar"
+    attributes:
+      state:
+        name: Nombre
+        active: Activo
+      admin:
+        email: Email
+        password: Contraseña
+        password_confirmation: Confirmación de contraseña
+        role_id: Rol
+        store_id: Comercio
+        gas_station_id: Estación de servicio
+      seller:
+        email: Email
+        full_name: Nombres y apellidos
+        phone_number: Teléfono        
+        cell_phone: Celular
+        active: Activo
+        photo: Foto
+        media_type: Tipo de medio
+      company:
+        name: Nombre
+        active: Activo
+        media_type: Tipo de medio
+      digital_presence:
+        name: Nombre
+        active: Activo
+        icon: Icono
+      digital_presence_format:
+        name: Nombre
+        descripcion: Descripción
+        active: Activo
+      program:
+        company_id: Medio
+        company: Medio
+        name: Nombre
+        days: Días de emisión
+        times: Horarios
+        description: Descripción
+        premiere: Estreno
+        active: Activo
+        views: Visualizaciones
+        views_period: Periodo de las visualizaciones
+        source: Fuente
+        target: Target
+        reach: Alcance en números
+        web_site: Sitio web
+        web_site_description: Descripción del sitio web
+        monthly_visits: Visitas mensuales
+        monthly_users: Usuarios mensuales
+        men_percentage: Porcentaje de hombres
+        women_percentage: Porcentaje de mujeres
+        position: Posición
+        country_wide_reach: Alcance nacional
+      gas_station:
+        social_reason: Razón social
+        gov_id: RUC
+        name: Nombre
+        active: Activo
+        city: Ciudad
+        address: Dirección
+      aliance:
+        name: Nombre
+        start_date: Fecha inicio
+        end_date: Fecha fin
+        coupons: Cupones
+        value_per_coupon: Valor por cupón
+        secret_code: Código secreto
+        aliance_type: Tipo de alianza
+        active: Activo
+      store:
+        name: Nombre
+        city: Ciudad
+        address: Dirección
+        phone: Teléfono
+        contact_name: Nombre del contacto
+        contact_email: Email del contacto
+        active: Activo
+      coupon:
+        new_: Nuevo
+        used_: Usado
+        expired_: Expirado
+        aliance_id: Alianza
+        hash_code: Código (hash)
+        status: Estado
+        used_at: Fecha de utilización
+        gas_station_id: Estación de servicio
+        active: Activo
+        customer_full_name: Nombre completo (cliente)
+        customer_gov_id: RUC/CI (cliente)
+        customer_invoice_number: Factura número (cliente)
+        customer_filled_at: Fecha de delegación (cliente en comercio)
+        customer_invoice_amount: Factura monto (cliente)
+      prize:
+        name: Nombre
+        quantity: Cantidad
+        step: Frecuencia
+        active: Activo
+    errors:
+      messages:
+        taken: ya ha sido tomado
+        blank: "no puede ser vacío"
+        too_short: "es muy corto (mínimo %{count} caracteres)"
+        too_long: "es muy largo (máximo %{count} caracteres)"  
+        confirmation: "y Contraseña deben ser iguales"
+        required: debe existir
+        not_a_number: no es un número
+        greater_than_or_equal_to: tiene que ser mayor o igual que %{count}
+        greater_than: tiene que ser mayor a %{count}
+        invalid: no es válido
+        spoofed_media_type: tiene contenido que no es el declarado
+        in_between: tiene que ser entre %{min} y %{max}
+        restrict_dependent_destroy:
+          has_many: "No se puede borrar el registro porque existe una relación dependiente: %{record}"        

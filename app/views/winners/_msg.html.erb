@@ -1,0 +1,27 @@
+ <%case msg
+ when "not found","delivered" then
+ %>
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <div class="alert-message">
+            <strong>Atención:</strong> El código no existe o ya ha sido utilizado.
+        </div>
+    </div>     
+<%when "not confirmed" then %>
+    <div class="alert alert-danger alert-dismissible" role="alert">
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <div class="alert-message">
+        <strong>Atención:</strong> Falta aprobar Participacion.
+        <%= link_to participation_path(winner.participation)  do %>
+        <i class="align-middle" data-feather="eye"></i>
+        <% end %>
+    </div>
+    </div>
+<%when "delivering"%>
+    <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <div class="alert-message">
+            <strong>¡Entregado!</strong> El código <i><%= winner.code %></i> pertenece al participante <i><%= winner.participation.full_name %></i> y ganó el siguiente premio: <i><%= winner.gas_station_detail.prize.name %></i>. Fecha de la adjudicación: <i><%= py_date_and_time(winner.created_at) %></i>. 
+        </div>
+    </div>
+<%end%>

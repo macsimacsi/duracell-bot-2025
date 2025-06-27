@@ -1,0 +1,77 @@
+<style>
+  .confetti{
+     max-width: 100%;
+     display: block;
+     margin: 0 auto;
+     border: 1px solid #ddd;
+     user-select: none;
+
+  }
+  #odomenter{
+      font-size: 1.53125rem;
+      line-height:1.2
+  }
+</style>
+<div class="row" id="demo">
+  <div class="col-12">
+    <div class="mb-3">
+      <h1 class="h3 d-inline align-middle">Sortear ganador</h1>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title mb-0">Sortear</h5>
+        <select></select>
+      </div>
+      <div class="card-body">
+        <%= form_for :winner, path: check_winner_post_path, method: :post do |form| %>
+          <div class="actions">
+            <%= button_tag( :class => "btn btn-primary mt-2") do %>
+              <i class="fas fa-fw fa-lightbulb"></i> Sortear
+            <% end %>
+          </div>
+        <% end  %>
+        <% if request.post? %>
+          <%if @winner%>
+            <div id="myContainer" >
+              <h1><strong>Ganador:</strong><span class="d-none"> <%=@winner.participations.first.full_name%></span> <span class="odomenter">******************</span></h1>
+              <h2><strong>CI/RUC:</strong> <span class="d-none"><%texto=@winner.participations.first.document.to_s%><%="*"*(texto.length - 3) + texto.slice(-3,3)%></span> <span class="odomenter ci"></span></h2>
+              <h3><strong>Contacto:</strong> <span class="d-none"><%texto=@winner.contact.to_s%><%="*"*(texto.length - 3) + texto.slice(-3,3)%></span> <span class="odomenter phone"></span></h3>
+            </div>
+            <!--<%= link_to participant_path(@winner), class:"btn btn-secondary", target:"_blank"  do %>
+													<i class="align-middle" data-feather="eye"></i> Ver participaciones
+												<% end %>-->
+            <canvas class="confetti d-none" id="canvas"></canvas>
+            <script src="/js/confetti.js"></script>
+            <script>
+              function generateRandom(ci=true,maxLimit = 10000000){
+                  let rand = Math.random() * maxLimit;
+                  rand = Math.floor(rand);
+                  return (ci?'':"5959")+rand;
+              }
+
+              function getWinner(){
+
+                  interval = setInterval(function(){
+                      $('.odomenter.ci').html(generateRandom());
+                      $('.odomenter.phone').html(generateRandom(ci=false));
+                  },100);
+
+                  setTimeout(function(){
+                      clearInterval(interval);
+                      $("#myContainer span.d-none").removeClass("d-none");
+                      $("#canvas").removeClass("d-none");
+                      $(".odomenter").hide();
+                      initConfetti();
+                      render();
+                  },10000);
+              }
+                                                              $(document).ready(function(){
+              getWinner();
+                                                              });
+            </script>
+          <%end%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

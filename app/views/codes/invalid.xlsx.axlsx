@@ -1,0 +1,8 @@
+wb = xlsx_package.workbook
+
+wb.add_worksheet(name: "Codes") do |sheet|
+  sheet.add_row ["id", "value", "product", "user"]
+  @codes.each do |code|
+    sheet.add_row [code.id, code.code_str]
+  end
+end

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Participation:</strong>
+  <%= @winner.participation_id %>
+</p>
+
+<p>
+  <strong>Gas stations detail:</strong>
+  <%= @winner.gas_stations_detail_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @winner.status %>
+</p>
+
+<%= link_to 'Edit', edit_winner_path(@winner) %> |
+<%= link_to 'Back', winners_path %>

@@ -1,0 +1,39 @@
+					<div class="mb-3">
+						<h1 class="h3 d-inline align-middle">Usuario administrador</h1>
+					</div>
+
+          			<div class="row">
+						<div class="col-xl-6">
+							<div class="card">
+								<div class="card-body">
+
+									<table class="table table-hover table-striped table-sm mt-2 mb-6">
+										<tbody>
+											<tr>
+												<th><%= icon('id') %>Id</th>
+												<td><%= @admin.id %></td>
+											</tr>
+											<tr>
+												<th><%= icon('text') %>Email</th>
+												<td><%= @admin.email %></td>
+											</tr>
+											<tr>
+												<th><%= icon('text') %>Password</th>
+												<td><i>[no visible]</i></td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+							</div>
+						</div> 
+
+         			 </div>     
+
+          <%= link_to(admins_path, class: 'btn btn-primary btn-lg') do %>
+            <i class="fas fa-fw fa-arrow-left"></i> Volver a la lista
+          <% end %>
+
+          <%= link_to(edit_admin_path(@admin), class: 'btn btn-primary btn-lg') do %>
+            <i class="fas fa-fw fa-pen"></i> Editar
+          <% end %>          

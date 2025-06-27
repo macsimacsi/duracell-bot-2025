@@ -1,0 +1,89 @@
+<ul class="sidebar-nav">
+  <li class="sidebar-item">
+    <a href='<%= dashboard_path %>' class="sidebar-link">
+      <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Panel de control</span>
+    </a>
+  </li>
+  <li class="sidebar-header">
+    Lista de acciones
+  </li>
+  <% if current_admin.can('participant', 'read') %>
+    <li class="sidebar-item">
+      <%= link_to participants_path, class: 'sidebar-link' do %>
+        <%= icon 'user' %>
+        <span class="align-middle">Participantes</span>
+      <% end %>
+    </li>
+  <% end %>
+
+  <% if current_admin.can('participation', 'read') %>
+    <li class="sidebar-item">
+      <%= link_to participations_path, class: 'sidebar-link' do %>
+        <%= icon 'user-plus' %>
+        <span class="align-middle">Participaciones</span>
+      <% end %>
+    </li>
+  <% end %>
+
+  <% if current_admin.can('state', 'read') %>
+    <li class="sidebar-item">
+      <%= link_to states_path, class: 'sidebar-link' do %>
+        <%= icon 'map-pin' %>
+        <span class="align-middle">Departamentos</span>
+      <% end %>
+    </li>
+  <% end %>
+
+  <li class="sidebar-item">
+    <%= link_to winners_path, class: 'sidebar-link' do %>
+      <i class="align-middle me-2 fas fa-fw fa-trophy"></i>
+      <span class="align-middle">Ganadores</span>
+    <% end %>
+  </li>
+
+  <li class="sidebar-item">
+    <%= link_to prizes_path, class: 'sidebar-link' do %>
+      <i class="align-middle me-2 fas fa-fw fa-gift"></i>
+      <span class="align-middle">Premios</span>
+    <% end %>
+  </li>
+
+  <li class="sidebar-item">
+    <%= link_to sorteo_winner_path, class: 'sidebar-link' do %>
+      <i class="align-middle me-2 fas fa-fw fa-store"></i>
+      <span class="align-middle">Sorteador</span>
+    <% end %>
+  </li>
+
+  <li class="sidebar-item">
+    <%= link_to sorteo_config_path, class: 'sidebar-link' do %>
+      <i class="align-middle me-2 fas fa-fw fa-cogs"></i>
+      <span class="align-middle">Configurar Sorteo</span>
+    <% end %>
+  </li>
+
+  <li class="sidebar-header">
+    Administración
+  </li>
+  <% if current_admin.can('admin', 'read') %>
+    <li class="sidebar-item">
+      <%= link_to admins_path, class: 'sidebar-link' do %>
+        <i class="align-middle me-2 fas fa-fw fa-user-lock"></i>
+        <span class="align-middle">Administradores</span>
+      <% end %>
+    </li>
+  <% end %>
+  <% if current_admin.can('role', 'read') %>
+    <li class="sidebar-item">
+      <%= link_to roles_path, class: 'sidebar-link' do %>
+        <i class="align-middle me-2 fas fa-fw fa-key"></i>
+        <span class="align-middle">Roles</span>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+<script>
+  $(document).ready(function () {
+      $(`ul.sidebar-nav li.sidebar-item a[href="${document.location.pathname}"]`).closest("li.sidebar-item").addClass('active');
+  });
+</script>

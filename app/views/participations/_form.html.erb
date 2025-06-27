@@ -1,0 +1,62 @@
+<%= form_with(model: participation) do |form| %>
+  <% if participation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(participation.errors.count, "error") %> prohibited this participation from being saved:</h2>
+
+      <ul>
+        <% participation.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :participant_id %>
+    <%= form.text_field :participant_id %>
+  </div>
+
+  <!--<div class="field">
+    <%= form.label :img_path %>
+    <%= form.text_area :img_path %>
+  </div>-->
+
+  <div class="field">
+    <%= form.label :full_name %>
+    <%= form.text_field :full_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :document %>
+    <%= form.text_field :document %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.text_field :quantity %>
+  </div>
+<!--
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.number_field :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city_id %>
+    <%= form.text_field :city_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gas_station_id %>
+    <%= form.text_field :gas_station_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_id %>
+    <%= form.text_field :product_id %>
+  </div>-->
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

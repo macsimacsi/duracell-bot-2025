@@ -1,0 +1,15 @@
+wb = xlsx_package.workbook
+
+wb.add_worksheet(name: "Premios") do |sheet|
+  # Create the header row
+  sheet.add_row ["ID", "Premio",
+                "Cantidad", "Stock", "Sorteados",
+                "Estado",
+                "Fecha creación"]
+  @prizes.each do |prize|
+    sheet.add_row [prize.id, prize.name,
+                   prize.query_quantity, prize.query_stock, prize.query_quantity - prize.query_stock,
+                   (prize.active ? "ACTIVO" : "INACTIVO"),
+                   prize.created_at]
+  end                
+end

@@ -1,0 +1,21 @@
+<p>
+  <strong>Nombre:</strong>
+  <%= @setting.name %>
+</p>
+
+<p>
+  <strong>Activo:</strong>
+  <%=generic_active @setting.active %>
+</p>
+<p>
+  <strong>Fecha inicio:</strong>
+  <%=py_date @setting.date_start %>
+</p>
+
+<p>
+  <strong>Fecha fin:</strong>
+  <%=py_date @setting.date_end %>
+</p>
+
+<%= link_to 'Editar', edit_setting_path(@setting), class:'btn btn-outline-primary' %> |
+<%= link_to 'Volver', settings_path, class:'btn btn-outline-secondary' %>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title> <%= ENV['APP_NAME'] %> </title>
+  <meta name="description" content="">
+  <meta property="og:url" content="<%= dashboard_path %>">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="<%= ENV['APP_NAME'] %>">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="<%= dashboard_path %>/img/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="<%= request.host %>">
+  <meta property="twitter:url" content="<%= dashboard_path %>">
+  <meta name="twitter:title" content="<%= ENV['APP_NAME'] %>">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="<%= dashboard_path %>/img/logo.png">
+  <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <meta name='description' content='<%= if content_for?(:description) then
+                                          yield(:description)
+                                        end %>'/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@adminkit/core@latest/dist/css/app.css">
+  <link rel="stylesheet" href="/css/gd-custom-admin.css?v=1.4">
+  <link rel="stylesheet" href="/css/trix.css">
+  <link rel="stylesheet" href="/css/active_storage_drag_and_drop.css">
+  <link class="js-stylesheet" href="/css/light.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link red='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+  <%# <%= stylesheet_link_tag '//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/le-frog/jquery-ui.min.css' %>
+  <%= javascript_pack_tag 'application' %>
+  <%# <%= stylesheet_pack_tag 'application', media: 'all' %>
+  <style>
+      .bg-image {
+          position: relative;
+          overflow: hidden;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: 50%;
+      }
+
+      .hover-zoom {
+          --mdb-image-hover-zoom-transition: all 0.3s linear;
+          --mdb-image-hover-zoom-transform: scale(1.1);
+      }
+
+      .hover-zoom img, .hover-zoom video {
+          transition: var(--mdb-image-hover-zoom-transition);
+      }
+
+      .hover-zoom:hover img, .hover-zoom:hover video {
+          transform: var(--mdb-image-hover-zoom-transform);
+      }
+  </style>
+</head>
+<body data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
+<div class="wrapper">
+  <nav id="sidebar" class="sidebar js-sidebar">
+    <div class="sidebar-content js-simplebar">
+      <div class="sidebar-user d-flex justify-content-center">
+        <a href="<%= dashboard_path %>">
+          <%= image_tag 'logo.png', class: 'img-fluid', width: '120' %>
+        </a>
+      </div>
+      <%= render "shared/admin_menu" %>
+    </div>
+  </nav>
+  <div class="main">
+    <nav class="navbar navbar-expand navbar-light navbar-bg">
+      <a class="sidebar-toggle js-sidebar-toggle">
+        <i class="hamburger align-self-center"></i>
+      </a>
+      <div class="navbar-collapse collapse">
+        <ul class="navbar-nav navbar-align gap-3">
+          <li class="d-flex justify-content-center align-items-center">
+            <p class="m-0">
+              <%= current_admin.email %>
+            </p>
+          </li>
+          <li>
+            <%= link_to destroy_admin_session_path, method: :delete, class: 'btn btn-danger' do %>
+              <div class="d-flex align-items-center justify-content-center gap-2">
+                <%= icon('right-from-bracket') %>
+                <span class="d-none d-md-block">Cerrar sesión</span>
+              </div>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main class="content">
+      <div class="container-fluid p-0">
+        <%= yield %>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row text-muted">
+          <div class="col-6 text-start">
+            <p class="mb-0">
+              <a href="https://www.gdigital.com.py" target="_blank" class="text-muted"><strong>&copy; Desarrollado por G
+                Digital</strong></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+<script src="https://unpkg.com/@adminkit/core@latest/dist/js/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!--      <script src="/js/notify.js" crossorigin="anonymous"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $('form').on('click', '.remove_record', function (event) {
+            $(this).prev('input[type=hidden]').val('1');
+            $(this).closest('tr').toggle("fade");
+
+            return event.preventDefault();
+        });
+
+        $('form').on('click', '.add_fields', function (event) {
+            console.log('clicked!');
+            var regexp, time;
+            time = new Date().getTime();
+            regexp = new RegExp($(this).data('id'), 'g');
+            $('.fields').append($(this).data('fields').replace(regexp, time));
+            return event.preventDefault();
+        });
+
+        $('form').on('click', '.add_fields2', function (event) {
+            var regexp, time;
+            time = new Date().getTime();
+            regexp = new RegExp($(this).data('id'), 'g');
+            //console.log(g(regexp);
+            $('.fields2').append($(this).data('fields').replace(regexp, time));
+            return event.preventDefault();
+        });
+
+        $('form').on('click', '.add_fields3', function (event) {
+            console.log('clicked!');
+            var regexp, time;
+            time = new Date().getTime();
+            regexp = new RegExp($(this).data('id'), 'g');
+            console.log(regexp);
+            $('.fields3').append($(this).data('fields').replace(regexp, time));
+            return event.preventDefault();
+        });
+
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+        $(".exportExcel").on("click", function (e) {
+            e.preventDefault();
+            window.location = `${$(this).attr("href")}${window.location.search}`;
+        });
+
+    });
+</script>
+<%= content_for :scripts %>
+</body>
+</html>

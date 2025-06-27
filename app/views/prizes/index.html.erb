@@ -1,0 +1,31 @@
+<%= render 'shared/admin_index_table',
+  # Config file: app/helpers/admins_helper.rb
+  title: 'Premios',
+  records: @prizes,
+  pagy: @pagy,
+  q: @q,
+  new_path: new_prize_path,
+  export_path: prizes_path(format: :xlsx),
+  columns: columns_for(:prizes)
+%>
+
+<script>
+  $( document ).ready(function() {
+
+  	const search = $('#gd-search-container');
+
+  	$( "#gd-search-close" ).click(function() {
+  		search.hide(350);
+  	});
+
+  	$( "#gd-do-search" ).click(function( event ) {
+  		search.show(350);
+  		event.preventDefault();
+  	});
+
+  });
+
+  <% if params[:q] && params[:q][:searchable_content_cont] %>
+  	$('#q_searchable_content_cont').val('<%= params[:q][:searchable_content_cont] %>');
+  <% end %>
+</script>

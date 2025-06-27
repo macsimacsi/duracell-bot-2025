@@ -1,0 +1,96 @@
+<% title        ||= 'Listado' %>
+<% columns      ||= [] %>
+<% records      ||= [] %>
+<% q            ||= nil %>
+<% new_path     ||= nil %>
+<% export_path  ||= nil %>
+<% record_path  ||= ->(r) { '#' } %>
+<% pagy         ||= nil %>
+
+<div class="mb-3">
+  <h1 class="h3 d-inline align-middle"><%= title %></h1>
+</div>
+<div class="row">
+  <div class="col-xl-12">
+    <div class="card">
+      <div class="card-header pb-0">
+        <div class="card-actions float-end">
+          <div class="dropdown show">
+            <a href="#" data-bs-toggle="dropdown" data-bs-display="static">
+              <i class="align-middle" data-feather="more-horizontal"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end">
+              <% if new_path %>
+                <%= link_to "Nuevo", new_path, class: 'dropdown-item' %>
+              <% end %>
+              <%= link_to "Buscar", nil, class: 'dropdown-item', id: 'gd-do-search' %>
+              <% if export_path %>
+                <%= link_to "Exportar a Excel", export_path, class: 'dropdown-item exportExcel' %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <h5 class="card-title mb-0">Lista</h5>
+      </div>
+
+      <div id="gd-search-container" class="card-header pb-0 gd-admin-search<%= " gd-display-none" if !params[:commit] %>">
+        <%= search_form_for q, class: 'row row-cols-md-auto align-items-center' do |f| %>
+          <% if q&.object&.respond_to?(:searchable_content) %>
+            <div class="col-12">
+              <%= f.label :searchable_content_cont, class: 'visually-hidden' %>
+              <%= f.search_field :searchable_content_cont, class: 'form-control mb-2 me-sm-2' %>
+            </div>
+          <% end %>
+          <div class="col-12">
+            <div class="select-tag">
+              Mostrar <%= select_tag :limit, options_for_select([5, 10, 25, 50, 100, 1000], params[:limit] || 10) %> registros por página
+            </div>
+          </div>
+          <div class="col-12">
+            <%= f.submit 'Buscar', class: 'btn btn-primary mb-2' %>
+            <i id="gd-search-close" class="fas fa-fw fa-window-close ms-2"></i>
+            <%= link_to "Limpiar", request.path %>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="card-body">
+        <table class="table table-hover" style="width:100%">
+          <thead>
+            <tr>
+              <% columns.each do |col| %>
+                <th><%= col[:header] %></th>
+              <% end %>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% records.each do |record| %>
+              <tr>
+                <% columns.each do |col| %>
+                  <td><%= col[:value].call(record) %></td>
+                <% end %>
+                <td class="table-action">
+                  <%= link_to record_path.call(record) do %>
+                    <i class="align-middle" data-feather="eye"></i>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+        <% if local_assigns[:pagy] %>
+          <div class="row">
+            <div class="col-sm-12 col-md-5">
+              <%== pagy_info pagy %>
+            </div>
+            <div class="col-sm-12 col-md-7">
+              <%== pagy_bootstrap_nav pagy %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

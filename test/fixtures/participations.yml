@@ -1,0 +1,65 @@
+# == Schema Information
+#
+# Table name: participations
+#
+#  id             :bigint           not null, primary key
+#  code_str       :string
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#  code_id        :bigint
+#  participant_id :bigint           not null
+#
+# Indexes
+#
+#  index_participations_on_code_id         (code_id)
+#  index_participations_on_participant_id  (participant_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (code_id => codes.id)
+#  fk_rails_...  (participant_id => participants.id)
+#
+participation_one:
+  participant_id: 1
+  product_id: 1
+  code_id: 1
+  state_id: 1
+  code_str: "ABC123"
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+participation_two:
+  participant_id: 1
+  product_id: 2
+  code_id: 2
+  state_id: 1
+  code_str: "XYZ789"
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+participation_three:
+  participant_id: 2
+  product_id: 1
+  code_id: 3
+  state_id: 2
+  code_str: "LMN456"
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+participation_four:
+  participant_id: 3
+  product_id: 3
+  code_id: 4
+  state_id: 3
+  code_str: "DEF321"
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+participation_five:
+  participant_id: 2
+  product_id: 2
+  code_id: 5
+  state_id: 2
+  code_str: "GHJ654"
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>

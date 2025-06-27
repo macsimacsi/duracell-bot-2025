@@ -1,0 +1,217 @@
+.dy-has-error-contact input.form-control, .dy-has-error-contact textarea.form-control, .dy-has-error-contact select.form-control {
+    border: 1px solid red !important;
+}
+
+
+.has-error input.form-control, .has-error textarea.form-control, .has-error select.form-control {
+    border: 1px solid red !important;
+}
+
+.has-error span.help-block {
+    color: red !important;
+}
+
+.gd-admin-search {
+    background-color: #d0e2fd !important;
+}
+
+.gd-display-none {
+    display: none;
+}
+
+.gd-small-text {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.gd-vertical-middle {
+    vertical-align: middle;
+}
+
+.gd-admin-category-icon-index {
+    font-size: 28px;
+}
+
+.gd-admin-category-icon-show {
+    font-size: 60px;
+}
+
+.gd-admin-index-icon-margin {
+    margin-right: 5px;
+}
+
+.gd-admin-category-accent {
+    background-color: #F5F7FB !important;
+}
+
+.gd-admin-category-normal {
+    background-color: #e8e9ed !important;
+}
+
+.gd-font-12 {
+    font-size: 12px;
+}
+
+.gd-admin-product-pyg {
+    min-width: 110px;
+}
+
+.gd-admin-product-usd {
+    min-width: 110px;
+}
+
+.gd-admin-texts {
+    min-width: 210px;
+}
+
+.gd-admin-product-es-container {
+    background-color: #f9eeee;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.gd-admin-product-es-container-color {
+    background-color: #f9eeee !important;
+}
+
+.gd-admin-product-po-container {
+    /*margin-top: 20px;*/
+    background-color: #e7f3ec;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.gd-admin-product-po-container-color {
+    background-color: #e7f3ec !important;
+}
+
+.gd-admin-product-show-title-column {
+    min-width: 200px;
+}
+
+
+.gd-admin-product-show-image {
+    border: 1px solid #C1CCCA;
+    background-color: #fff;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.gd-admin-product-show-image-delete {
+    position: absolute;
+    margin-top: -30px;
+    background-color: #fff;
+    padding: 2px;
+}
+
+#sortable { list-style-type: none; margin: 0; padding: 0; width: 450px; }
+#sortable li { margin: 3px 3px 3px 3px; padding: 10px; float: left; height: 120px; }
+
+.gd-admin-product-edit-money {
+    background-color: #f1f3ff !important;
+}
+
+.gd-custom-login-label {
+    color: #001F55 !important;
+}
+
+.gd-custom-login-input {
+    background-color: #001F55 !important;
+}
+
+.gd-custom-login-button {
+    color: white !important;
+    background-color: #DDA131 !important;
+    border: none !important;
+    font-size: 22px !important;
+    border-radius: 10px !important;
+    min-height: 60px !important;
+}
+
+select.gd-has-error, div.gd-has-error {
+    border: 1px solid red;
+}
+
+.gd-admin-finance-icon {
+    margin-right: 5px;
+}
+
+.tab .nav-tabs .nav-link.active {
+    background: #e6eaf2 !important;
+}
+
+.tab .tab-content {
+    background: #e6eaf2 !important;
+}
+
+pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+.string { color: green; }
+.number { color: darkorange; }
+.boolean { color: blue; }
+.null { color: magenta; }
+.key { color: red; }
+
+.gd-seller-photo {
+    width: 300px;
+    border-radius: 50%;
+}
+
+.gd-seller-photo-mini {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.gd-company-logo {
+    width: 300px;
+}
+
+.gd-company-logo-mini {
+    width: 50px;
+}
+
+.gd-program-form-company-logo {
+    width: 65px;
+}
+
+.gd-program-form-container {
+    background-color: #cee4f8;
+    border: 1px solid #cee4f8;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.gd-program-form-container:hover {
+    border: 1px solid #4da9ff;
+}
+
+.font-15px {
+    font-size: 15px;
+}
+
+input[type="text"]:hover, input[type="time"]:hover, select:hover, textarea:hover {
+    border: 1px solid #818181;
+}
+
+.gd-input-group {
+    background-color: #e5e2e2;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.gd-container-error {
+    border: 1px solid red;
+    border-radius: 5px;
+}
+.tableFixHead{
+    max-height: 60vh;
+    overflow-y:auto;
+    display:block;
+}
+.tableFixHead thead th {
+    position:sticky;
+    top:0;
+    background-color:white;
+}

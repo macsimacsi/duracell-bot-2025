@@ -1,0 +1,75 @@
+<!-- Select2 styles -->
+<%= stylesheet_link_tag "https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css", media: "all" %>
+<%= javascript_include_tag "https://code.jquery.com/jquery-3.6.0.min.js" %>
+<%= javascript_include_tag "https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js" %>
+
+<div class="card shadow-sm border-0 mb-4">
+  <div class="card-header bg-white border-bottom">
+    <h5 class="mb-0"><i class="bi bi-funnel-fill me-2 text-primary"></i>Filtros para el sorteo</h5>
+  </div>
+
+  <%= form_with url: sorteo_winner_path, method: :get, local: true do %>
+    <div class="card-body row g-3">
+      <div class="col-md-4">
+        <%= label_tag :states, 'Departamentos', class: 'form-label fw-semibold' %>
+        <%= select_tag 'states[]',
+          options_for_select([['Todas', 'all']] + @states.map { |c| [c.name, c.id] }, params[:states]),
+          multiple: true,
+          class: 'form-select select2-multiple' %>
+      </div>
+
+      <div class="col-md-4">
+        <%= label_tag :prizes, 'Premios', class: 'form-label fw-semibold' %>
+        <%= select_tag 'prizes[]',
+          options_for_select(@prizes.map { |c| [c.name, c.quantity, c.id] }, params[:prizes]),
+          multiple: false,
+          class: 'form-select select2-multiple' %>
+      </div>
+
+    <div class="card-footer d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <div class="text-muted small">
+        <% if params[:states].present? %>
+          <span class="badge bg-info">Ciudades: <%= params[:states].size %></span>
+        <% end %>
+      </div>
+
+      <%= submit_tag '🎯 Ir al sorteo', class: 'btn btn-outline-primary px-4 fw-semibold' %>
+    </div>
+  <% end %>
+</div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  $('.select2-multiple').select2({
+    placeholder: "Seleccioná uno o varios...",
+    allowClear: true,
+    width: '100%'
+  });
+
+  function updateParticipantCounter() {
+    const data = {
+      categories: $('select[name="categories[]"]').val(),
+      products: $('select[name="products[]"]').val(),
+      states: $('select[name="states[]"]').val()
+    };
+
+    $.get('/admin/sorteo_count', data, function (response) {
+      $('#participant-counter').removeClass('d-none');
+      $('#count-number').text(response.count);
+    });
+  }
+
+  ['categories[]', 'products[]', 'states[]'].forEach(name => {
+    $(`select[name='${name}']`).on('change', updateParticipantCounter);
+  });
+
+  updateParticipantCounter();
+
+  function disableButton() {
+    const button = document.getElementById('back');
+    if (button) {
+      button.disabled = true;
+    }
+  }
+});
+</script>

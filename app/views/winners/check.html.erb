@@ -1,0 +1,31 @@
+                    <div class="row">
+					    <div class="col-12 col-lg-5">					
+                            <div class="mb-3">
+                                <h1 class="h3 d-inline align-middle">Verificar ganador</h1>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Verificar</h5>
+                                </div>
+                                <div class="card-body">
+                                
+
+                                    <% if request.post? %>
+                                    
+                                    <%=render "msg", msg:@msg, winner:@winner%>
+                                    <% end %>
+                                    <%= form_for :winner, path: check_winner_post_path, method: :post do |form| %>
+                                        <div class="field">
+                                            <%= form.label 'Ingresá el código del ganador', class: 'form-label' %>
+                                            <%= form.text_field :code, class: 'form-control', required: true %>
+                                        </div>   
+                                        <div class="actions">
+                                            <%= button_tag( :class => "btn btn-primary mt-2") do %>
+                                            <i class="fas fa-fw fa-lightbulb"></i> Verificar
+                                            <% end %>
+                                        </div>                                                                             
+                                    <% end  %>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>

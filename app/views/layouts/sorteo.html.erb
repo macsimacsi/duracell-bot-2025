@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- HTML Meta Tags -->
+    <title>Santa Helena | Sorteo</title>
+    <meta name="description" content="CAMINOS QUE UNEN AMIGOS.">
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://mazzei.godigital.com.py">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mazzei">
+    <meta property="og:description" content="CAMINOS QUE UNEN AMIGOS.">
+    <meta property="og:image" content="https://mazzei.godigital.com.py/img/logo.png">
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="mazzei.godigital.com.py">
+    <meta property="twitter:url" content="https://mazzei.godigital.com.py">
+    <meta name="twitter:title" content="Mazzei">
+    <meta name="twitter:description" content="CAMINOS QUE UNEN AMIGOS.">
+    <meta name="twitter:image" content="https://mazzei.godigital.com.py/img/logo.png">
+    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<!--    <link rel="stylesheet" href="https://unpkg.com/@adminkit/core@latest/dist/css/app.css">-->
+<!--    <link rel="stylesheet" href="/css/gd-custom-admin.css?v=1.4">-->
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">-->
+<!--    <link red='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>-->
+<!--    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>-->
+<!--    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>-->
+    <script src="/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <style>
+    body{
+      overflow:hidden;
+      height: 100vh;
+    }
+    .bg-primary{
+      background-image: url("<#%= asset_path('fondo.jpg') %>");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    .footer{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        background: transparent !important;
+        font-size: .7rem;
+    }
+    .icon{
+        width: .85rem;
+        height: .85rem;
+    }
+
+    </style>
+  </head>
+  <body class="bg-primary" data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
+    <main class="container-fluid p-0 h-100 text-center">
+      <%= yield %>
+      <div class="row" style="position: absolute; bottom: 2rem; width: 100%;">
+        <div class="col-3 d-flex flex-column align-items-center justify-content-center">
+          <div style="position: absolute; bottom: 0;margin-left: 1rem;">
+            <%#=image_tag 'aventura.png', class: 'img-fluid', style: 'max-height: 40vh;' %>
+            <%#=image_tag 'personaje.png', class: 'img-fluid', style: 'max-height: 70vh;' %>
+          </div>
+        </div>
+        <div class="col-9 d-flex align-items-center justify-content-center">
+          <%#= image_tag 'premios.png', class:'img-fluid' %>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

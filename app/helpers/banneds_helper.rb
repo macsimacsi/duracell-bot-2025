@@ -1,0 +1,2 @@
+module BannedsHelper
+end

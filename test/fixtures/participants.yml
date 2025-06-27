@@ -1,0 +1,117 @@
+# == Schema Information
+#
+# Table name: participants
+#
+#  id                   :bigint           not null, primary key
+#  age                  :integer          default(0), not null
+#  contact              :string
+#  document             :string
+#  full_name            :string
+#  opt_out              :boolean          default(FALSE), not null
+#  participations_count :integer          default(0), not null
+#  received_template    :boolean          default(FALSE)
+#  status               :integer          default(0)
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
+#  state_id             :bigint
+#
+# Indexes
+#
+#  index_participants_on_age       (age)
+#  index_participants_on_state_id  (state_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (state_id => states.id)
+#
+
+juan_perez:
+  full_name: Juan Pérez
+  contact: "595981123456"
+  status: 1
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  document: "12345678"
+  opt_out: false
+  received_template: true
+  age: 30
+  state_id: 1
+  participations_count: 5
+
+maria_gomez:
+  full_name: María Gómez
+  contact: "595981654321"
+  status: 0
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  document: "87654321"
+  opt_out: true
+  received_template: false
+  age: 25
+  state_id: 2
+  participations_count: 0
+
+pedro_lopez:
+  full_name: Pedro López
+  contact: "595981987654"
+  status: 2
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  document: "23456789"
+  opt_out: false
+  received_template: true
+  age: 40
+  state_id: 3
+  participations_count: 10
+
+lucia_martinez:
+  full_name: Lucía Martínez
+  contact: "595981234567"
+  status: 1
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  document: "34567890"
+  opt_out: false
+  received_template: false
+  age: 35
+  state_id: 4
+  participations_count: 2
+
+jose_sanchez:
+  full_name: José Sánchez
+  contact: "595981345678"
+  status: 0
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  document: "45678901"
+  opt_out: true
+  received_template: true
+  age: 28
+  state_id: 5
+  participations_count: 1
+
+ana_britos:
+  full_name: Ana Britos
+  contact: "595981345674"
+  status: 0
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  document: "456789012"
+  opt_out: true
+  received_template: true
+  age: 19
+  state_id: 5
+  participations_count: 10
+
+guy_sanchez:
+  full_name: Guy Sánchez
+  contact: "595981345654"
+  status: 0
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  document: "456789012"
+  opt_out: true
+  received_template: false
+  age: 18
+  state_id: 5
+  participations_count: 1

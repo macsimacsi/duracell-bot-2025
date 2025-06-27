@@ -1,0 +1,39 @@
+					<div class="mb-3">
+						<h1 class="h3 d-inline align-middle">Departamento del Paraguay</h1>
+					</div>
+
+          <div class="row">
+						<div class="col-xl-6">
+							<div class="card">
+								<div class="card-body">
+
+									<table class="table table-hover table-striped table-sm mt-2 mb-6">
+										<tbody>
+											<tr>
+												<th><%= icon('id') %>Id</th>
+												<td><%= @state.id %></td>
+											</tr>
+											<tr>
+												<th><%= icon('text') %>Nombre</th>
+												<td><%= @state.name %></td>
+											</tr>
+											<tr>
+												<th><%= icon('status') %>Activo</th>
+												<td><%= generic_active(@state.active) %></td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+							</div>
+						</div> 
+
+         	</div>     
+
+					<%= link_to(states_path, class: 'btn btn-primary btn-lg') do %>
+						<i class="fas fa-fw fa-arrow-left"></i> Volver a la lista
+					<% end %>
+
+					<%= link_to(edit_state_path(@state), class: 'btn btn-primary btn-lg') do %>
+						<i class="fas fa-fw fa-pen"></i> Editar
+					<% end %> 

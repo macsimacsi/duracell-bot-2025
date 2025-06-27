@@ -1,0 +1,23 @@
+
+                    <div class="row">
+					    <div class="col-12 col-lg-5">					
+                            <div class="mb-3">
+                                <h1 class="h3 d-inline align-middle">Editando Categoría</h1>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Editando</h5>
+                                </div>
+                                <div class="card-body">
+                                    <%= render 'form', code: @code %>
+                                </div>
+                            </div>
+                            <%= link_to(codes_path, class: 'btn btn-primary btn-lg') do %>
+            <i class="fas fa-fw fa-arrow-left"></i> Volver a la lista
+          <% end %>
+
+          <%= link_to(code_path(@code), class: 'btn btn-primary btn-lg') do %>
+            <i class="fas fa-fw fa-eye"></i> Ver
+          <% end %>
+                        </div>
+                    </div>

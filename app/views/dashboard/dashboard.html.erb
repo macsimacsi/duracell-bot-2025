@@ -1,0 +1,197 @@
+<div class="container-fluid">
+  <div class="row g-3">
+    <%= render "dashboard/stat_cards" %>
+  </div>
+
+  <div class="row g-4 mt-2">
+    <h2 class="text-start fw-bold mb-3 text-uppercase">
+      <i data-feather="calendar" class="text-info h-100"></i> Estadísticas
+    </h2>
+
+    <div id="chart-data" style="display: none;">
+      <%= @chart_data.to_json.html_safe %>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-8">
+          <div class="card flex-fill h-100 w-100">
+            <div class="card-header">
+              <h3 class="text-uppercase">
+                <i data-feather="bar-chart-2" class="text-info"></i> Participaciones por día
+              </h3>
+            </div>
+            <div class="card-body">
+              <div class="chart chart-sm">
+                <canvas id="dayChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card h-100 w-100">
+            <h3 class="text-uppercase text-center pt-3">
+              <i data-feather="pie-chart" class="text-info"></i> Participaciones por Edad
+            </h3>
+            <div class="py-3">
+              <canvas id="ageChart" class="ms-0 ms-lg-3"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<h3 class="mt-4 text-uppercase fw-bold">
+  <i data-feather="map-pin" class="text-info"></i> Participantes y Participaciones por Estado
+</h3>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Estado</th>
+      <th class="text-end">Participantes</th>
+      <th class="text-end">Participaciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @state_stats.each do |state| %>
+      <tr>
+        <td><%= state.state_name %></td>
+        <td class="text-end"><%= number_with_delimiter(state.participants_count, delimiter: '.') %></td>
+        <td class="text-end"><%= number_with_delimiter(state.participations_count, delimiter: '.') %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const chartDataElement = document.getElementById('chart-data');
+  if (!chartDataElement) return;
+
+  const chartData = JSON.parse(chartDataElement.textContent);
+
+  function createChart(type, id, data, label, customOptions = {}) {
+    const canvas = document.getElementById(id);
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+
+    const defaultOptions = {
+      responsive: true,
+      plugins: { legend: { display: false } }
+    };
+
+    const options = Object.assign({}, defaultOptions, customOptions);
+
+    // Detección inteligente de formato de datos
+    const chartConfig = {
+      type: type,
+      data: Array.isArray(data.datasets) ? data : {
+        labels: Object.keys(data),
+        datasets: [{ label: label, data: Object.values(data) }]
+      },
+      options: options
+    };
+
+    return new Chart(ctx, chartConfig);
+  }
+
+  // 📊 Gráfico de Participaciones por Día
+  createChart('line', 'dayChart', chartData.by_day_data, 'Participaciones', {
+    plugins: {
+      legend: {
+        display: true,
+        position: 'top',
+        labels: {
+          color: '#333',
+          font: {
+            size: 14
+          }
+        }
+      }
+    },
+    elements: {
+      line: {
+        borderWidth: 3,
+        borderColor: 'rgb(54, 235, 96)',
+        backgroundColor: 'rgba(54, 235, 96, 0.2)',
+        fill: true
+      },
+      point: {
+        radius: 5,
+        backgroundColor: 'rgb(54, 235, 96)',
+        hoverRadius: 6
+      }
+    },
+    animation: {
+      tension: {
+        duration: 1000,
+        easing: 'easeInOutQuart',
+        from: 0.3,
+        to: 0.8,
+        loop: false
+      }
+    }
+  });
+
+  // 🍩 Gráfico de Participaciones por Edad
+  const ageChartData = {
+    labels: Object.keys(chartData.by_age_data),
+    datasets: [{
+      data: Object.values(chartData.by_age_data),
+      backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'],
+      hoverBackgroundColor: ['#FF6384CC', '#36A2EBCC', '#FFCE56CC', '#4BC0C0CC']
+    }]
+  };
+
+  createChart('doughnut', 'ageChart', ageChartData, 'Participaciones por Edad', {
+    plugins: {
+      legend: {
+        position: 'top',
+        padding: {
+          top: 10,
+          bottom: 10
+        },
+        labels: {
+          boxWidth: 20,
+          font: {
+            size: 14,
+            family: 'Arial'
+          },
+          color: '#000'
+        }
+      },
+      tooltip: {
+        callbacks: {
+          label: function (context) {
+            const label = context.label || '';
+            const value = context.parsed;
+            const total = context.chart._metasets[context.datasetIndex].total;
+            const percentage = ((value / total) * 100).toFixed(1);
+            return `${label}: ${value} (${percentage}%)`;
+          }
+        }
+      }
+    },
+    elements: {
+      arc: {
+        borderWidth: 2,
+        borderColor: 'white',
+        hoverBorderColor: '#aaa',
+        hoverOffset: 8
+      }
+    },
+    animation: {
+      animateScale: true,
+      animateRotate: true
+    }
+  });
+});
+</script>

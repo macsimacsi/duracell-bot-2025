@@ -1,0 +1,84 @@
+<div class="mb-3">
+  <h1 class="h3 d-inline align-middle">Rol: <b><%= @role.name %></b> - Id: <b><%= @role.id %></b></h1>
+</div>
+<div class="row">
+  <div class="col-xl-6">
+    <div class="card">
+      <div class="card-body">
+        <table class="table table-hover table-striped table-sm mt-2 mb-6">
+          <tbody>
+            <tr>
+              <th width='20%'></th>
+              <th width='20%'>Crear</th>
+              <th width='20%'>Leer</th>
+              <th width='20%'>Actualizar</th>
+              <th width='20%'>Borrar</th>
+            </tr>
+            <tr>
+              <th>Administradores</th>
+              <th><%= role_status(@role.admin_create) %></th>
+              <th><%= role_status(@role.admin_read) %></th>
+              <th><%= role_status(@role.admin_update) %></th>
+              <th><%= role_status(@role.admin_delete) %></th>
+            </tr>
+            <tr>
+              <th>Roles</th>
+              <th><%= role_status(@role.role_create) %></th>
+              <th><%= role_status(@role.role_read) %></th>
+              <th><%= role_status(@role.role_update) %></th>
+              <th><%= role_status(@role.role_delete) %></th>
+            </tr>
+            <tr>
+              <th>Participantes</th>
+              <th><%= role_status(@role.participant_create) %></th>
+              <th><%= role_status(@role.participant_read) %></th>
+              <th><%= role_status(@role.participant_update) %></th>
+              <th><%= role_status(@role.participant_delete) %></th>
+            </tr>
+            <tr>
+              <th>Participaciones</th>
+              <th><%= role_status(@role.participation_create) %></th>
+              <th><%= role_status(@role.participation_read) %></th>
+              <th><%= role_status(@role.participation_update) %></th>
+              <th><%= role_status(@role.participation_delete) %></th>
+            </tr>
+            <tr>
+              <th>Codigos</th>
+              <th><%= role_status(@role.code_create) %></th>
+              <th><%= role_status(@role.code_read) %></th>
+              <th><%= role_status(@role.code_update) %></th>
+              <th><%= role_status(@role.code_delete) %></th>
+            </tr>
+            <tr>
+              <th>Ganadores</th>
+              <th><%= role_status(@role.winner_create)%></th>
+              <th><%= role_status(@role.winner_read)%></th>
+              <th><%= role_status(@role.winner_update) %></th>
+              <th><%= role_status(@role.winner_delete) %></th>
+            </tr>
+            <tr>
+              <th>Premios</th>
+              <th><%= role_status(@role.prize_create)%></th>
+              <th><%= role_status(@role.prize_read)%></th>
+              <th><%= role_status(@role.prize_update) %></th>
+              <th><%= role_status(@role.prize_delete) %></th>
+            </tr>
+            <tr>
+              <th>Departamentos</th>
+              <th><%= role_status(@role.state_create)%></th>
+              <th><%= role_status(@role.state_read)%></th>
+              <th><%= role_status(@role.state_update) %></th>
+              <th><%= role_status(@role.state_delete) %></th>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+<%= link_to(roles_path, class: 'btn btn-primary btn-lg') do %>
+  <i class="fas fa-fw fa-arrow-left"></i> Volver a la lista
+<% end %>
+<%= link_to(edit_role_path(@role), class: 'btn btn-primary btn-lg') do %>
+  <i class="fas fa-fw fa-pen"></i> Editar
+<% end %>

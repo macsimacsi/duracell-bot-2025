@@ -1,0 +1,178 @@
+<style>
+  .confetti {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    user-select: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+  }
+  #odomenter {
+    font-size: 1.53125rem;
+    line-height: 1.2;
+  }
+  .card {
+    opacity: 0.9;
+    max-width: 500px;
+    margin: 3rem auto;
+  }
+</style>
+
+<div class="row" id="demo">
+  <div class="col-12">
+    <div class="card d-flex align-items-center justify-content-center">
+      <div class="card-body">
+        <h1 class="text-center">Sortear</h1>
+        <table id="ganador-container" class="table d-none">
+          <tbody>
+            <tr>
+              <td><strong>Nro. de Cédula:</strong></td>
+              <td>
+                <h2>
+                  <span class="winner" id="ci" style="display:none;"></span>
+                  <span class="odomenter ci">*********</span>
+                </h2>
+              </td>
+            </tr>
+            <tr class="info-extra d-none">
+            <tr class="info-extra d-none">
+              <td><strong>Teléfono:</strong></td>
+              <td>
+                <h2>
+                  <span class="winner" id="numero"></span>
+                  <span class="odomenter numero">*********</span>
+                </h2>
+              </td>
+            </tr>
+            <td><strong>Premio:</strong></td>
+              <td>
+                <h2>
+                  <span class="winner" id="premio"></span>
+                  <span class="odomenter premio">*********</span>
+                </h2>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <button id="back" class="btn btn-primary" onclick="goBack()" disabled>
+                  <%= bs_icon 'bi bi-arrow-counterclockwise me-1' %>Volver
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <%= form_tag sorteo_winner_path, method: :post, id: 'winner-form' do %>
+          <div class="text-center">
+            <% Array(params[:states]).each do |cat| %>
+              <%= hidden_field_tag 'states[]', cat %>
+            <% end %>
+
+            <% Array(params[:prizes]).each do |prize| %>
+              <%= hidden_field_tag 'prizes[]', prize %>
+            <% end %>
+
+            <% Array(params[:participations]).each do |p| %>
+              <%= hidden_field_tag 'participations[]', p %>
+            <% end %>
+
+            <%= button_tag(type: :submit, class: "btn btn-primary") do %>
+              <%= bs_icon 'bi bi-shuffle me-1' %> Iniciar
+            <% end %>
+          </div>
+        <% end %>
+    </div>
+  </div>
+</div>
+
+</div>
+<canvas class="confetti d-none" id="canvas"></canvas>
+<script src="/js/confetti.js"></script>
+<script>
+  let odometerStartTime, ajaxDone, interval;
+
+  function goBack() {
+    $("#winner-form").removeClass("d-none");
+    $("#ganador-container").addClass("d-none");
+    $("#canvas").addClass("d-none");
+    $("#ganador-container .winner").hide();
+    $(".info-extra").addClass("d-none");
+    $("#back").attr("disabled", true);
+  }
+
+  function generateRandom(ci = true, maxLimit = 10000000) {
+    let rand = Math.floor(Math.random() * maxLimit);
+    return ci ? rand.toString().padStart(7, '*') : rand;
+  }
+
+  function getWinner() {
+    $("#winner-form").addClass("d-none");
+    $("#ganador-container").removeClass("d-none");
+    $("#ganador-container .odomenter").show();
+    $(".info-extra").addClass("d-none"); // asegurarse de que estén ocultos
+
+    interval = setInterval(function () {
+      $('.odomenter.ci').html(generateRandom(false));
+      $('.odomenter.nombre').html(generateRandom(false, 100));
+      $('.odomenter.numero').html(generateRandom(false, 100));
+    }, 100);
+
+    odometerStartTime = new Date().getTime();
+    ajaxDone = false;
+
+    setTimeout(function () {
+      if (ajaxDone === true) {
+        clearInterval(interval);
+        $("#canvas").removeClass("d-none");
+        $("#ganador-container .odomenter").hide();
+        $("#ganador-container .winner").show();
+        $(".info-extra").removeClass("d-none"); // mostrar los datos extra
+        $("#back").attr("disabled", false);
+      }
+    }, 3500);
+  }
+
+  $(document).ready(function () {
+    initConfetti();
+    render();
+
+    $("#winner-form").on('submit', function (e) {
+      e.preventDefault();
+      getWinner();
+      let form = $(this);
+
+      $.ajax({
+        url: form.attr('action'),
+        type: form.attr('method'),
+        data: form.serialize(),
+        success: function (response) {
+          ajaxDone = true;
+          if (odometerStartTime + 3500 <= new Date().getTime()) {
+            clearInterval(interval);
+            $("#canvas").removeClass("d-none");
+            $("#ganador-container .odomenter").hide();
+            $("#ganador-container .winner").show();
+            $(".info-extra").removeClass("d-none");
+            $("#back").attr("disabled", false);
+          }
+          $.each(response, function (index, element) {
+            $(`#ganador-container #${index}`).html(element);
+          });
+        },
+        error: function (xhr, status, error) {
+          clearInterval(interval);
+          goBack();
+          swal({
+            title: "No se encontró un ganador. Vuelve a intentar el sorteo",
+            icon: "error"
+          });
+        }
+      });
+    });
+  });
+</script>

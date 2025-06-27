@@ -1,0 +1,1088 @@
+[
+  {
+    "state_id": 0,
+    "state": "Capital",
+    "city_id": 0,
+    "city": "Asunción"
+  },
+  {
+    "state_id": 1,
+    "state": "Concepción",
+    "city_id": 101,
+    "city": "Concepción"
+  },
+  {
+    "state_id": 1,
+    "state": "Concepción",
+    "city_id": 102,
+    "city": "Belén"
+  },
+  {
+    "state_id": 1,
+    "state": "Concepción",
+    "city_id": 103,
+    "city": "Horqueta"
+  },
+  {
+    "state_id": 1,
+    "state": "Concepción",
+    "city_id": 104,
+    "city": "Loreto"
+  },
+  {
+    "state_id": 1,
+    "state": "Concepción",
+    "city_id": 107,
+    "city": "Yby Ya'u"
+  },
+  {
+    "state_id": 1,
+    "state": "Concepción",
+    "city_id": 108,
+    "city": "Azotey"
+  },
+  {
+    "state_id": 1,
+    "state": "Concepción",
+    "city_id": 111,
+    "city": "Paso Barreto"
+  },
+  {
+    "state_id": 2,
+    "state": "San Pedro",
+    "city_id": 2,
+    "city": "Puerto Rosario"
+  },
+  {
+    "state_id": 2,
+    "state": "San Pedro",
+    "city_id": 201,
+    "city": "San Pedro del Ycuamandiyú"
+  },
+  {
+    "state_id": 2,
+    "state": "San Pedro",
+    "city_id": 202,
+    "city": "Antequera"
+  },
+  {
+    "state_id": 2,
+    "state": "San Pedro",
+    "city_id": 203,
+    "city": "Choré"
+  },
+  {
+    "state_id": 2,
+    "state": "San Pedro",
+    "city_id": 204,
+    "city": "Gral. Elizardo Aquino"
+  },
+  {
+    "state_id": 2,
+    "state": "San Pedro",
+    "city_id": 205,
+    "city": "Itacurubí del Rosario"
+  },
+  {
+    "state_id": 2,
+    "state": "San Pedro",
+    "city_id": 206,
+    "city": "Lima"
+  },
+  {
+    "state_id": 2,
+    "state": "San Pedro",
+    "city_id": 208,
+    "city": "Santani"
+  },
+  {
+    "state_id": 2,
+    "state": "San Pedro",
+    "city_id": 211,
+    "city": "Unión"
+  },
+  {
+    "state_id": 2,
+    "state": "San Pedro",
+    "city_id": 212,
+    "city": "25 de Diciembre"
+  },
+  {
+    "state_id": 2,
+    "state": "San Pedro",
+    "city_id": 214,
+    "city": "Gral. Resquín"
+  },
+  {
+    "state_id": 2,
+    "state": "San Pedro",
+    "city_id": 216,
+    "city": "Guayaybi"
+  },
+  {
+    "state_id": 2,
+    "state": "San Pedro",
+    "city_id": 217,
+    "city": "Capiibary"
+  },
+  {
+    "state_id": 2,
+    "state": "San Pedro",
+    "city_id": 218,
+    "city": "Santa Rosa del Aguaray"
+  },
+  {
+    "state_id": 2,
+    "state": "San Pedro",
+    "city_id": 220,
+    "city": "Liberación"
+  },
+  {
+    "state_id": 3,
+    "state": "Cordillera",
+    "city_id": 301,
+    "city": "Caacupe"
+  },
+  {
+    "state_id": 3,
+    "state": "Cordillera",
+    "city_id": 302,
+    "city": "Altos"
+  },
+  {
+    "state_id": 3,
+    "state": "Cordillera",
+    "city_id": 303,
+    "city": "Arroyos y Esteros"
+  },
+  {
+    "state_id": 3,
+    "state": "Cordillera",
+    "city_id": 304,
+    "city": "Atyra"
+  },
+  {
+    "state_id": 3,
+    "state": "Cordillera",
+    "city_id": 305,
+    "city": "Caraguatay"
+  },
+  {
+    "state_id": 3,
+    "state": "Cordillera",
+    "city_id": 307,
+    "city": "Eusebio Ayala"
+  },
+  {
+    "state_id": 3,
+    "state": "Cordillera",
+    "city_id": 308,
+    "city": "Isla Pucu"
+  },
+  {
+    "state_id": 3,
+    "state": "Cordillera",
+    "city_id": 309,
+    "city": "Itacurubí de la Cordillera"
+  },
+  {
+    "state_id": 3,
+    "state": "Cordillera",
+    "city_id": 314,
+    "city": "Piribebuy"
+  },
+  {
+    "state_id": 3,
+    "state": "Cordillera",
+    "city_id": 315,
+    "city": "1ro. De marzo"
+  },
+  {
+    "state_id": 3,
+    "state": "Cordillera",
+    "city_id": 316,
+    "city": "San Bernardino"
+  },
+  {
+    "state_id": 3,
+    "state": "Cordillera",
+    "city_id": 317,
+    "city": "Santa Elena"
+  },
+  {
+    "state_id": 3,
+    "state": "Cordillera",
+    "city_id": 318,
+    "city": "Tobatí"
+  },
+  {
+    "state_id": 3,
+    "state": "Cordillera",
+    "city_id": 319,
+    "city": "Valenzuela"
+  },
+  {
+    "state_id": 3,
+    "state": "Cordillera",
+    "city_id": 320,
+    "city": "San José Obrero"
+  },
+  {
+    "state_id": 4,
+    "state": "Guairá",
+    "city_id": 401,
+    "city": "Villarrica"
+  },
+  {
+    "state_id": 4,
+    "state": "Guairá",
+    "city_id": 402,
+    "city": "Borja"
+  },
+  {
+    "state_id": 4,
+    "state": "Guairá",
+    "city_id": 403,
+    "city": "Mauricio Jose Troche"
+  },
+  {
+    "state_id": 4,
+    "state": "Guairá",
+    "city_id": 404,
+    "city": "Coronel Martinez"
+  },
+  {
+    "state_id": 4,
+    "state": "Guairá",
+    "city_id": 405,
+    "city": "Felix Perez Cardozo"
+  },
+  {
+    "state_id": 4,
+    "state": "Guairá",
+    "city_id": 406,
+    "city": "Eugenio A. Garay"
+  },
+  {
+    "state_id": 4,
+    "state": "Guairá",
+    "city_id": 407,
+    "city": "Colonia Independencia"
+  },
+  {
+    "state_id": 4,
+    "state": "Guairá",
+    "city_id": 408,
+    "city": "Itapé"
+  },
+  {
+    "state_id": 4,
+    "state": "Guairá",
+    "city_id": 409,
+    "city": "Iturbe"
+  },
+  {
+    "state_id": 4,
+    "state": "Guairá",
+    "city_id": 410,
+    "city": "José Fassardi"
+  },
+  {
+    "state_id": 4,
+    "state": "Guairá",
+    "city_id": 412,
+    "city": "Natalicio Talavera"
+  },
+  {
+    "state_id": 4,
+    "state": "Guairá",
+    "city_id": 413,
+    "city": "Ñumi"
+  },
+  {
+    "state_id": 4,
+    "state": "Guairá",
+    "city_id": 414,
+    "city": "San Salvador"
+  },
+  {
+    "state_id": 4,
+    "state": "Guairá",
+    "city_id": 416,
+    "city": "Dr. Botrel"
+  },
+  {
+    "state_id": 4,
+    "state": "Guairá",
+    "city_id": 417,
+    "city": "Paso Yobai"
+  },
+  {
+    "state_id": 4,
+    "state": "Guairá",
+    "city_id": 418,
+    "city": "Tebicuary"
+  },
+  {
+    "state_id": 4,
+    "state": "Guairá",
+    "city_id": 1017,
+    "city": "Mbocayaty"
+  },
+  {
+    "state_id": 5,
+    "state": "Caaguazú",
+    "city_id": 501,
+    "city": "Coronel Oviedo"
+  },
+  {
+    "state_id": 5,
+    "state": "Caaguazú",
+    "city_id": 502,
+    "city": "Caaguazú"
+  },
+  {
+    "state_id": 5,
+    "state": "Caaguazú",
+    "city_id": 503,
+    "city": "Carayao"
+  },
+  {
+    "state_id": 5,
+    "state": "Caaguazú",
+    "city_id": 504,
+    "city": "Cecilio Báez"
+  },
+  {
+    "state_id": 5,
+    "state": "Caaguazú",
+    "city_id": 505,
+    "city": "Santa Rosa del Mbutuy"
+  },
+  {
+    "state_id": 5,
+    "state": "Caaguazú",
+    "city_id": 506,
+    "city": "Juan Manuel Frutos (Pastoreo)"
+  },
+  {
+    "state_id": 5,
+    "state": "Caaguazú",
+    "city_id": 507,
+    "city": "Repatriación"
+  },
+  {
+    "state_id": 5,
+    "state": "Caaguazú",
+    "city_id": 508,
+    "city": "Nueva Londres"
+  },
+  {
+    "state_id": 5,
+    "state": "Caaguazú",
+    "city_id": 509,
+    "city": "San Joaquin"
+  },
+  {
+    "state_id": 5,
+    "state": "Caaguazú",
+    "city_id": 510,
+    "city": "San José de los Arroyos"
+  },
+  {
+    "state_id": 5,
+    "state": "Caaguazú",
+    "city_id": 511,
+    "city": "Yhu"
+  },
+  {
+    "state_id": 5,
+    "state": "Caaguazú",
+    "city_id": 512,
+    "city": "Campo 9"
+  },
+  {
+    "state_id": 5,
+    "state": "Caaguazú",
+    "city_id": 513,
+    "city": "RI 3 Corrales"
+  },
+  {
+    "state_id": 5,
+    "state": "Caaguazú",
+    "city_id": 519,
+    "city": "Simon Bolivar"
+  },
+  {
+    "state_id": 5,
+    "state": "Caaguazú",
+    "city_id": 520,
+    "city": "Vaquería"
+  },
+  {
+    "state_id": 6,
+    "state": "Caazapá",
+    "city_id": 601,
+    "city": "Caazapá"
+  },
+  {
+    "state_id": 6,
+    "state": "Caazapá",
+    "city_id": 603,
+    "city": "Buena Vista"
+  },
+  {
+    "state_id": 6,
+    "state": "Caazapá",
+    "city_id": 604,
+    "city": "Moises Bertoni"
+  },
+  {
+    "state_id": 6,
+    "state": "Caazapá",
+    "city_id": 605,
+    "city": "Higinio Morinigo"
+  },
+  {
+    "state_id": 6,
+    "state": "Caazapá",
+    "city_id": 606,
+    "city": "Maciel"
+  },
+  {
+    "state_id": 6,
+    "state": "Caazapá",
+    "city_id": 607,
+    "city": "San Juan Nepomuceno"
+  },
+  {
+    "state_id": 6,
+    "state": "Caazapá",
+    "city_id": 609,
+    "city": "Fulgencio Yegros"
+  },
+  {
+    "state_id": 6,
+    "state": "Caazapá",
+    "city_id": 610,
+    "city": "Yuty"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 7,
+    "city": "Maria Auxiliadora"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 28,
+    "city": "Edelira 28"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 415,
+    "city": "Yatytay"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 701,
+    "city": "Encarnación"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 702,
+    "city": "Bella Vista Sur"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 703,
+    "city": "Cambyreta"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 704,
+    "city": "Capitán Meza"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 705,
+    "city": "Capitan Miranda"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 707,
+    "city": "Carmen del Paraná"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 708,
+    "city": "Coronel Bogado"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 709,
+    "city": "Kimex (Colonia Carlos A. López)"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 710,
+    "city": "Natalio"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 711,
+    "city": "Colonia Fram"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 712,
+    "city": "Gral. . Artigas"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 713,
+    "city": "Gral. Delgado"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 714,
+    "city": "Hohenau"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 717,
+    "city": "Obligado"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 718,
+    "city": "Mayor Otaño"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 719,
+    "city": "San Cosme Y Damián"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 720,
+    "city": "San Pedro del Paraná"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 721,
+    "city": "San Rafael del Paraná"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 723,
+    "city": "Edelira"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 724,
+    "city": "Tomas Romero Pereira"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 726,
+    "city": "La Paz"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 728,
+    "city": "San Juan del Paraná"
+  },
+  {
+    "state_id": 7,
+    "state": "Itapúa",
+    "city_id": 729,
+    "city": "Pirapo"
+  },
+  {
+    "state_id": 8,
+    "state": "Misiones",
+    "city_id": 801,
+    "city": "San Juan Bautista"
+  },
+  {
+    "state_id": 8,
+    "state": "Misiones",
+    "city_id": 802,
+    "city": "Ayolas"
+  },
+  {
+    "state_id": 8,
+    "state": "Misiones",
+    "city_id": 803,
+    "city": "San Ignacio Misiones"
+  },
+  {
+    "state_id": 8,
+    "state": "Misiones",
+    "city_id": 805,
+    "city": "San Patricio"
+  },
+  {
+    "state_id": 8,
+    "state": "Misiones",
+    "city_id": 806,
+    "city": "Santa María Misiones"
+  },
+  {
+    "state_id": 8,
+    "state": "Misiones",
+    "city_id": 807,
+    "city": "Santa Rosa Misiones"
+  },
+  {
+    "state_id": 8,
+    "state": "Misiones",
+    "city_id": 808,
+    "city": "Santiago Misiones"
+  },
+  {
+    "state_id": 9,
+    "state": "Paraguarí",
+    "city_id": 901,
+    "city": "Paraguarí"
+  },
+  {
+    "state_id": 9,
+    "state": "Paraguarí",
+    "city_id": 902,
+    "city": "Acahay"
+  },
+  {
+    "state_id": 9,
+    "state": "Paraguarí",
+    "city_id": 904,
+    "city": "Caballero"
+  },
+  {
+    "state_id": 9,
+    "state": "Paraguarí",
+    "city_id": 905,
+    "city": "Carapeguá"
+  },
+  {
+    "state_id": 9,
+    "state": "Paraguarí",
+    "city_id": 906,
+    "city": "Escobar"
+  },
+  {
+    "state_id": 9,
+    "state": "Paraguarí",
+    "city_id": 907,
+    "city": "La Colmena"
+  },
+  {
+    "state_id": 9,
+    "state": "Paraguarí",
+    "city_id": 909,
+    "city": "Pirayú"
+  },
+  {
+    "state_id": 9,
+    "state": "Paraguarí",
+    "city_id": 910,
+    "city": "Quiindy"
+  },
+  {
+    "state_id": 9,
+    "state": "Paraguarí",
+    "city_id": 912,
+    "city": "San Roque Gonzalez"
+  },
+  {
+    "state_id": 9,
+    "state": "Paraguarí",
+    "city_id": 913,
+    "city": "Sapucai"
+  },
+  {
+    "state_id": 9,
+    "state": "Paraguarí",
+    "city_id": 915,
+    "city": "Yaguaron"
+  },
+  {
+    "state_id": 9,
+    "state": "Paraguarí",
+    "city_id": 916,
+    "city": "Ybycui"
+  },
+  {
+    "state_id": 9,
+    "state": "Paraguarí",
+    "city_id": 917,
+    "city": "Ybytymí"
+  },
+  {
+    "state_id": 10,
+    "state": "Alto Paraná",
+    "city_id": 10,
+    "city": "Nueva Fortuna"
+  },
+  {
+    "state_id": 10,
+    "state": "Alto Paraná",
+    "city_id": 110,
+    "city": "San Alberto"
+  },
+  {
+    "state_id": 10,
+    "state": "Alto Paraná",
+    "city_id": 1001,
+    "city": "Ciudad del Este"
+  },
+  {
+    "state_id": 10,
+    "state": "Alto Paraná",
+    "city_id": 1002,
+    "city": "Puerto Pdte. Franco"
+  },
+  {
+    "state_id": 10,
+    "state": "Alto Paraná",
+    "city_id": 1003,
+    "city": "Domingo Martinez de Irala"
+  },
+  {
+    "state_id": 10,
+    "state": "Alto Paraná",
+    "city_id": 1004,
+    "city": "Juan León Malloriquin"
+  },
+  {
+    "state_id": 10,
+    "state": "Alto Paraná",
+    "city_id": 1005,
+    "city": "Hernandarias"
+  },
+  {
+    "state_id": 10,
+    "state": "Alto Paraná",
+    "city_id": 1006,
+    "city": "Itakyry"
+  },
+  {
+    "state_id": 10,
+    "state": "Alto Paraná",
+    "city_id": 1007,
+    "city": "Juan E. O'Leary"
+  },
+  {
+    "state_id": 10,
+    "state": "Alto Paraná",
+    "city_id": 1009,
+    "city": "Colonia Yguazu"
+  },
+  {
+    "state_id": 10,
+    "state": "Alto Paraná",
+    "city_id": 1010,
+    "city": "Cedrales"
+  },
+  {
+    "state_id": 10,
+    "state": "Alto Paraná",
+    "city_id": 1011,
+    "city": "Minga Guazú"
+  },
+  {
+    "state_id": 10,
+    "state": "Alto Paraná",
+    "city_id": 1012,
+    "city": "San Cristobal"
+  },
+  {
+    "state_id": 10,
+    "state": "Alto Paraná",
+    "city_id": 1013,
+    "city": "Santa Rita"
+  },
+  {
+    "state_id": 10,
+    "state": "Alto Paraná",
+    "city_id": 1014,
+    "city": "Naranjal"
+  },
+  {
+    "state_id": 10,
+    "state": "Alto Paraná",
+    "city_id": 1015,
+    "city": "SANTA ROSA DEL MONDAY"
+  },
+  {
+    "state_id": 10,
+    "state": "Alto Paraná",
+    "city_id": 1016,
+    "city": "Minga Porá"
+  },
+  {
+    "state_id": 10,
+    "state": "Alto Paraná",
+    "city_id": 1019,
+    "city": "Iruña"
+  },
+  {
+    "state_id": 10,
+    "state": "Alto Paraná",
+    "city_id": 1020,
+    "city": "Santa Fe del Paraná"
+  },
+  {
+    "state_id": 11,
+    "state": "Central",
+    "city_id": 1101,
+    "city": "Areguá"
+  },
+  {
+    "state_id": 11,
+    "state": "Central",
+    "city_id": 1102,
+    "city": "Capiatá"
+  },
+  {
+    "state_id": 11,
+    "state": "Central",
+    "city_id": 1103,
+    "city": "Fernando de la Mora"
+  },
+  {
+    "state_id": 11,
+    "state": "Central",
+    "city_id": 1104,
+    "city": "Guarambaré"
+  },
+  {
+    "state_id": 11,
+    "state": "Central",
+    "city_id": 1105,
+    "city": "Itá"
+  },
+  {
+    "state_id": 11,
+    "state": "Central",
+    "city_id": 1106,
+    "city": "Itagua"
+  },
+  {
+    "state_id": 11,
+    "state": "Central",
+    "city_id": 1107,
+    "city": "Lambaré"
+  },
+  {
+    "state_id": 11,
+    "state": "Central",
+    "city_id": 1108,
+    "city": "Limpio"
+  },
+  {
+    "state_id": 11,
+    "state": "Central",
+    "city_id": 1109,
+    "city": "Luque"
+  },
+  {
+    "state_id": 11,
+    "state": "Central",
+    "city_id": 1110,
+    "city": "Mariano Roque Alonso"
+  },
+  {
+    "state_id": 11,
+    "state": "Central",
+    "city_id": 1111,
+    "city": "Nueva Italia"
+  },
+  {
+    "state_id": 11,
+    "state": "Central",
+    "city_id": 1112,
+    "city": "Ñemby"
+  },
+  {
+    "state_id": 11,
+    "state": "Central",
+    "city_id": 1113,
+    "city": "San Antonio"
+  },
+  {
+    "state_id": 11,
+    "state": "Central",
+    "city_id": 1114,
+    "city": "San Lorenzo"
+  },
+  {
+    "state_id": 11,
+    "state": "Central",
+    "city_id": 1115,
+    "city": "Villa Elisa"
+  },
+  {
+    "state_id": 11,
+    "state": "Central",
+    "city_id": 1116,
+    "city": "Villeta"
+  },
+  {
+    "state_id": 11,
+    "state": "Central",
+    "city_id": 1117,
+    "city": "Ypacarai"
+  },
+  {
+    "state_id": 11,
+    "state": "Central",
+    "city_id": 1118,
+    "city": "Ypane"
+  },
+  {
+    "state_id": 11,
+    "state": "Central",
+    "city_id": 1119,
+    "city": "José Agusto Saldivar"
+  },
+  {
+    "state_id": 12,
+    "state": "Ñeembucú",
+    "city_id": 1201,
+    "city": "Pilar"
+  },
+  {
+    "state_id": 12,
+    "state": "Ñeembucú",
+    "city_id": 1202,
+    "city": "Alberdi"
+  },
+  {
+    "state_id": 12,
+    "state": "Ñeembucú",
+    "city_id": 1215,
+    "city": "Villa Oliva"
+  },
+  {
+    "state_id": 13,
+    "state": "Amambay",
+    "city_id": 1301,
+    "city": "Pedro Juan Caballero"
+  },
+  {
+    "state_id": 13,
+    "state": "Amambay",
+    "city_id": 1302,
+    "city": "Bella Vista Norte"
+  },
+  {
+    "state_id": 13,
+    "state": "Amambay",
+    "city_id": 1303,
+    "city": "Capitán Bado"
+  },
+  {
+    "state_id": 13,
+    "state": "Amambay",
+    "city_id": 1304,
+    "city": "Sanja Pyta"
+  },
+  {
+    "state_id": 14,
+    "state": "Canindeyú",
+    "city_id": 14,
+    "city": "Puente Kyha"
+  },
+  {
+    "state_id": 14,
+    "state": "Canindeyú",
+    "city_id": 1401,
+    "city": "Salto del Guaira"
+  },
+  {
+    "state_id": 14,
+    "state": "Canindeyú",
+    "city_id": 1402,
+    "city": "Corpus Christi"
+  },
+  {
+    "state_id": 14,
+    "state": "Canindeyú",
+    "city_id": 1403,
+    "city": "Curuguaty"
+  },
+  {
+    "state_id": 14,
+    "state": "Canindeyú",
+    "city_id": 1408,
+    "city": "Katuete"
+  },
+  {
+    "state_id": 14,
+    "state": "Canindeyú",
+    "city_id": 1409,
+    "city": "La Paloma"
+  },
+  {
+    "state_id": 14,
+    "state": "Canindeyú",
+    "city_id": 1410,
+    "city": "Nueva Esperanza"
+  },
+  {
+    "state_id": 15,
+    "state": "Presidente Hayes",
+    "city_id": 1502,
+    "city": "Benjamín Aceval"
+  },
+  {
+    "state_id": 15,
+    "state": "Presidente Hayes",
+    "city_id": 1504,
+    "city": "Villa Hayes"
+  },
+  {
+    "state_id": 17,
+    "state": "Boquerón",
+    "city_id": 1604,
+    "city": "Filadelfia"
+  },
+  {
+    "state_id": 17,
+    "state": "Boquerón",
+    "city_id": 1605,
+    "city": "Loma Plata"
+  },
+  {
+    "state_id": 18,
+    "state": "Alto Paraguay",
+    "city_id": 1801,
+    "city": "Fuerte Olimpo"
+  }
+]

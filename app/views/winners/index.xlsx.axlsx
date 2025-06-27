@@ -1,0 +1,24 @@
+wb = xlsx_package.workbook
+
+wb.add_worksheet(name: "Ganadores") do |sheet|
+  # Create the header row
+  sheet.add_row ["ID", "Fecha sorteo", "Contacto", "Documento", "Departamento", "Nro. de Lote", "Nro. Participaciones"]
+
+  # Iterate over each winner and add data rows
+  @winners.each do |winner|
+    # Acceso seguro a la primera participación, usando "&." para manejar nil
+    first_participation = winner.participant.participations.first
+    last_participation = winner.participant.participations.last
+
+    # Agregar fila con los datos, manejando casos donde no haya participación
+    sheet.add_row [
+      winner.id,
+      py_date_and_time(winner.created_at),
+      winner.participant.contact,
+      first_participation&.participant.document || "N/A",
+      winner.participant.state.name,
+      winner.participant.participations.order(created_at: :desc).first&.code_str,
+      winner.participant.participations.count
+    ]
+  end
+end

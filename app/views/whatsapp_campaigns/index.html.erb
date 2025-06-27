@@ -1,0 +1,108 @@
+<div class="row">
+  <div class="col-12 col-lg-6 mx-auto">
+    <div class="card shadow-sm border-0 rounded-4">
+      <div class="card-body p-4">
+
+        <h5 class="mb-3 text-center">
+          📨 <strong>Enviar mensajes de campaña por WhatsApp</strong><br>
+          <small>Tener en cuenta el limite de meta.</small>
+        </h5>
+
+        <%= form_with url: whatsapp_campaigns_path, method: :post, local: true, id: "whatsapp-form" do %>
+          <div class="mb-3">
+            <label for="limit-field" class="form-label fw-semibold">Cantidad máxima de contactos</label>
+            <%= number_field_tag :limit, 10, class: "form-control", id: "limit-field", min: 1 %>
+          </div>
+
+          <div class="d-grid">
+            <%= submit_tag "📤 Enviar ahora", class: "btn btn-success", id: "send-button" %>
+          </div>
+        <% end %>
+
+        <hr class="my-4">
+
+        <div id="filtered-contacts" class="alert alert-info text-center rounded-3">
+          <i class="fas fa-spinner fa-spin me-2"></i> Cargando cantidad de contactos...
+        </div>
+
+        <div class="bg-light border rounded-3 p-3 mt-3">
+          <p class="mb-1">
+            💬 <strong>Precio por mensaje:</strong>
+            <span id="price-per-message" class="text-success">$0.08954 USD</span>
+          </p>
+          <p class="mb-2 text-muted small">
+            Incluye 10% IVA digital + 10% IVA local. <br>
+            <span class="text-danger">* Este precio puede variar según meta y debe ser tomado como un costo estimado.</span>
+          </p>
+        </div>
+
+        <div id="estimated-cost" class="alert alert-info mt-3 text-center fw-semibold" style="display: none;">
+          <span class="text-dark">Costo estimado total:</span>
+          <span id="cost-value" class="text-primary fw-bold"></span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const limitField = document.getElementById('limit-field');
+    const filteredContactsElement = document.getElementById('filtered-contacts');
+    const estimatedCostElement = document.getElementById('estimated-cost');
+    const costValueElement = document.getElementById('cost-value');
+    const sendButton = document.getElementById('send-button');
+    const whatsappForm = document.getElementById('whatsapp-form');
+
+    const COST_PER_MESSAGE = 0.08954;
+
+    function getFilteredContacts() {
+      if (!filteredContactsElement) return;
+
+      fetch(`/admin/whatsapp_campaigns_data?limit=${limitField.value}`)
+        .then(response => response.json())
+        .then(data => {
+          const count = data.contacts || 0;
+          filteredContactsElement.innerHTML = `📱 Contactos: <strong>${count}</strong>`;
+
+          const estimatedCost = (count * COST_PER_MESSAGE).toFixed(2);
+          costValueElement.textContent = `$${estimatedCost} USD`;
+          estimatedCostElement.style.display = 'block';
+        });
+    }
+
+    limitField.addEventListener('change', getFilteredContacts);
+
+    sendButton.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const countMatch = filteredContactsElement.textContent.match(/\d+/);
+      if (!countMatch) return;
+
+      const contactCount = parseInt(countMatch[0]);
+      const estimatedCost = (contactCount * COST_PER_MESSAGE).toFixed(2);
+
+      Swal.fire({
+        title: '¿Estás seguro?',
+        html: `Vas a enviar el anuncio a <strong>${contactCount}</strong> contacto(s).<br><br>
+               💬 Precio por mensaje: <strong>$${COST_PER_MESSAGE.toFixed(5)} USD</strong><br>
+               💰 <strong>Costo estimado total:</strong> $${estimatedCost} USD`,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Sí, enviar',
+        cancelButtonText: 'Cancelar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          whatsappForm.submit();
+        }
+      });
+    });
+
+    // Inicializar al cargar
+    getFilteredContacts();
+  });
+</script>

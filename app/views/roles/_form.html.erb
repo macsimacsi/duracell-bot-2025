@@ -1,0 +1,80 @@
+<%= form_with(model: role) do |form| %>
+  <% if role.errors.any? %>
+    <div class="alert alert-danger alert-dismissible" role="alert">
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      <div class="alert-message">
+        <strong>Error.</strong> No pudo guardarse debido a los siguientes errores
+      </div>
+    </div>
+  <% end %>
+  <div class="mb-3">
+    <%= form.label :name, class: 'form-label' %>
+    <%= form.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="mb-3">
+    <table class="table table-hover table-striped table-sm mt-2 mb-6">
+      <tbody>
+        <tr>
+          <th width='20%'></th>
+          <th width='20%'>Crear</th>
+          <th width='20%'>Leer</th>
+          <th width='20%'>Actualizar</th>
+          <th width='20%'>Borrar</th>
+        </tr>
+        <tr>
+          <th>Administradores</th>
+          <th><%= form.check_box :admin_create %></th>
+          <th><%= form.check_box :admin_read %></th>
+          <th><%= form.check_box :admin_update %></th>
+          <th><%= form.check_box :admin_delete %></th>
+        </tr>
+        <tr>
+          <th>Roles</th>
+          <th><%= form.check_box :role_create %></th>
+          <th><%= form.check_box :role_read %></th>
+          <th><%= form.check_box :role_update %></th>
+          <th><%= form.check_box :role_delete %></th>
+        </tr>
+        <tr>
+          <th>Participantes</th>
+          <th><%= form.check_box :participant_create %></th>
+          <th><%= form.check_box :participant_read %></th>
+          <th><%= form.check_box :participant_update %></th>
+          <th><%= form.check_box :participant_delete %></th>
+        </tr>
+        <tr>
+          <th>Participaciones</th>
+          <th><%= form.check_box :participation_create %></th>
+          <th><%= form.check_box :participation_read %></th>
+          <th><%= form.check_box :participation_update %></th>
+          <th><%= form.check_box :participation_delete %></th>
+        <tr>
+          <th>Ganadores</th>
+          <th><%= form.check_box :winner_create%></th>
+          <th><%= form.check_box :winner_read %></th>
+          <th><%= form.check_box :winner_update %></th>
+          <th><%= form.check_box :winner_delete %></th>
+        </tr>
+        <tr>
+          <th>Premios</th>
+          <th><%= form.check_box :prize_create%></th>
+          <th><%= form.check_box :prize_read %></th>
+          <th><%= form.check_box :prize_update %></th>
+          <th><%= form.check_box :prize_delete %></th>
+        </tr>
+        <tr>
+          <th>Departamentos</th>
+          <th><%= form.check_box :state_create%></th>
+          <th><%= form.check_box :state_read %></th>
+          <th><%= form.check_box :state_update %></th>
+          <th><%= form.check_box :state_delete %></th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="actions">
+    <%= button_tag( :class => "btn btn-primary mt-2") do %>
+      <i class="fas fa-fw fa-save"></i> Guardar
+    <% end %>
+  </div>
+<% end %>

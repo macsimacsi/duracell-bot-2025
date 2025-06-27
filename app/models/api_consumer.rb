@@ -1,0 +1,4 @@
+class ApiConsumer < ApiBaseCalls
+
+end
+  

@@ -1,0 +1,26 @@
+<%= form_with(model: state) do |form| %>
+  <% if state.errors.any? %>
+    <div class="alert alert-danger alert-dismissible" role="alert">
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      <div class="alert-message">
+        <strong>Error.</strong> No pudo guardarse debido a los siguientes errores
+      </div>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= form.label :name, class: 'form-label' %>
+    <%= form.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :active %>
+    <%= form.check_box :active %>
+  </div>
+
+  <div class="actions">
+      <%= button_tag( :class => "btn btn-primary mt-2") do %>
+      <i class="fas fa-fw fa-save"></i> Guardar
+      <% end %>
+  </div>
+<% end %>

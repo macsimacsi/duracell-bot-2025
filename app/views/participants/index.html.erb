@@ -1,0 +1,31 @@
+<%= render 'shared/admin_index_table',
+  title: 'Participantes',
+  records: @participants,
+  pagy: @pagy,
+  q: @q,
+  new_path: new_participation_path,
+  export_path: participants_path(format: :xlsx),
+  record_path: record_path_for(:participants),
+  columns: columns_for(:participants)
+%>
+
+<script>
+  $( document ).ready(function() {
+
+  	const search = $('#gd-search-container');
+
+  	$( "#gd-search-close" ).click(function() {
+  		search.hide(350);
+  	});
+
+  	$( "#gd-do-search" ).click(function( event ) {
+  		search.show(350);
+  		event.preventDefault();
+  	});
+
+  });
+
+  <% if params[:q] && params[:q][:searchable_content_cont] %>
+  	$('#q_searchable_content_cont').val('<%= params[:q][:searchable_content_cont] %>');
+  <% end %>
+</script>

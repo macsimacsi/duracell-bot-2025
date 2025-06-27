@@ -1,0 +1,14 @@
+wb = xlsx_package.workbook
+
+wb.add_worksheet(name: "Participaciones") do |sheet|
+  sheet.add_row %w[CI Nombre Teléfono Participaciones Fecha]
+  @participants.each do |record|
+    sheet.add_row [
+                    record.document,
+                    record.full_name,
+                    record.contact,
+                    record.participations.count,
+                    record.created_at
+                  ], types: [:string, :string, :string, :integer, :date]
+  end
+end
