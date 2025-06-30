@@ -16,10 +16,6 @@
 #  index_codes_on_used        (used)
 #  index_codes_on_value       (value) UNIQUE
 #
-# Foreign Keys
-#
-#  fk_rails_...  (product_id => products.id)
-#
 class Code < ApplicationRecord
   ransack_alias :searchable_content, :value
   belongs_to :product

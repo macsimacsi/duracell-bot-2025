@@ -15,11 +15,6 @@
 #  index_winners_on_participant_id  (participant_id)
 #  index_winners_on_prize_id        (prize_id)
 #
-# Foreign Keys
-#
-#  fk_rails_...  (participant_id => participants.id)
-#  fk_rails_...  (prize_id => prizes.id)
-#
 class Winner < ApplicationRecord
   ransack_alias :searchable_content,
                 :participation_participant_full_name_or_participation_participant_document_or_participation_participant_phone_or_prize_name

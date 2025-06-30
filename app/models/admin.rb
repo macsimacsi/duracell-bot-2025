@@ -18,10 +18,6 @@
 #  index_admins_on_reset_password_token  (reset_password_token) UNIQUE
 #  index_admins_on_role_id               (role_id)
 #
-# Foreign Keys
-#
-#  fk_rails_...  (role_id => roles.id)
-#
 class Admin < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

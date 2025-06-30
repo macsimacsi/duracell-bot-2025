@@ -7,6 +7,7 @@
 #  contact              :string
 #  document             :string
 #  full_name            :string
+#  genre                :integer          default(3), not null
 #  opt_out              :boolean          default(FALSE), not null
 #  participations_count :integer          default(0), not null
 #  received_template    :boolean          default(FALSE)
@@ -19,10 +20,6 @@
 #
 #  index_participants_on_age       (age)
 #  index_participants_on_state_id  (state_id)
-#
-# Foreign Keys
-#
-#  fk_rails_...  (state_id => states.id)
 #
 class Participant < ApplicationRecord
   ransack_alias :searchable_content, :full_name_or_contact

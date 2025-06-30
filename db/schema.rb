@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_06_24_174526) do
+ActiveRecord::Schema.define(version: 2025_06_30_180837) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
@@ -116,6 +116,12 @@ ActiveRecord::Schema.define(version: 2025_06_24_174526) do
     t.index ["contact"], name: "index_conversations_on_contact", unique: true
   end
 
+  create_table "genres", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "name"
+  end
+
   create_table "groups", force: :cascade do |t|
     t.string "name"
     t.integer "quantity", default: 1
@@ -146,6 +152,7 @@ ActiveRecord::Schema.define(version: 2025_06_24_174526) do
     t.integer "age", default: 0, null: false
     t.bigint "state_id"
     t.integer "participations_count", default: 0, null: false
+    t.integer "genre", default: 3, null: false
     t.index ["age"], name: "index_participants_on_age"
     t.index ["state_id"], name: "index_participants_on_state_id"
   end
@@ -156,8 +163,13 @@ ActiveRecord::Schema.define(version: 2025_06_24_174526) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "code_str"
     t.bigint "code_id"
+    t.integer "receipt"
+    t.string "local_str"
+    t.bigint "product_id"
+    t.integer "product_qty"
     t.index ["code_id"], name: "index_participations_on_code_id"
     t.index ["participant_id"], name: "index_participations_on_participant_id"
+    t.index ["product_id"], name: "index_participations_on_product_id"
   end
 
   create_table "prizes", force: :cascade do |t|
@@ -172,11 +184,11 @@ ActiveRecord::Schema.define(version: 2025_06_24_174526) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
-    t.boolean "active"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "category_id", null: false
-    t.index ["category_id"], name: "index_products_on_category_id"
+    t.integer "qty"
+    t.integer "participations_count"
+    t.boolean "active", default: true
   end
 
   create_table "roles", force: :cascade do |t|
@@ -248,14 +260,5 @@ ActiveRecord::Schema.define(version: 2025_06_24_174526) do
     t.index ["prize_id"], name: "index_winners_on_prize_id"
   end
 
-  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "admins", "roles"
-  add_foreign_key "codes", "products"
-  add_foreign_key "participants", "states"
-  add_foreign_key "participations", "codes"
-  add_foreign_key "participations", "participants"
-  add_foreign_key "products", "categories"
-  add_foreign_key "winners", "participants"
-  add_foreign_key "winners", "prizes"
+  add_foreign_key "participations", "products"
 end

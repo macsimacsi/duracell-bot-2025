@@ -3,16 +3,15 @@ class WhatsappController < ApplicationController
 
   def webhook
     if request.get?
-      verify_token = "GDigital"
+      verify_token = 'GDigital'
       mode = params['hub.mode']
       token = params['hub.verify_token']
       challenge = params['hub.challenge']
 
-      if mode == 'subscribe' && token == verify_token
-        return render plain: challenge, status: 200
-      else
-        return render plain: "Unauthorized", status: 403
-      end
+      return render plain: challenge, status: 200 if mode == 'subscribe' && token == verify_token
+
+      return render plain: 'Unauthorized', status: 403
+
     else
       return unless params&.dig(:entry, 0, :changes, 0, :value, :messages)
 
@@ -33,28 +32,26 @@ class WhatsappController < ApplicationController
       case participant.status.to_i
       when 0 # Se crea el participante
         BotLogger.entry(from, participant.status, body)
-        message =message = <<~MSG.strip
-        ¡Hola! 👋🤩
-        Bienvenido/a a la promo UN VINO PARA TODO HASTA PARA GANAR de VINO SANTA HELENA 🍇🍷
+        message = <<~MSG.strip
+          👋 ¡Hola! Gracias por participar en la promo Duracell te lleva al GP de Sao Paulo🏁
+          Para inscribirte al sorteo, por favor completá algunos datos. ¡No te tomará más de un minuto!
 
-        Para participar, necesitamos que nos envíes tu *número de cédula sin puntos ni espacios* (ejemplo: 1234567) por única vez para registrarte a la promoción. ✍🏼
-
-        Podes leer las bases y condiciones de la promo aquí:
-        https://santahelenabot.gdigital.com.py/img/ByC.pdf
+          🪪 *Primero, ingresá tu número de Cédula de Identidad (sin puntos ni guiones):*
         MSG
         participant.status = 1
-      when 1 # Se registra el número de cédula y se solicita la ciudad
+      when 1 # Se registra el número de cédula y se solicita el departamento
         if type == 'text' && is_number?(body)
           participant.document = body
           participant.status = 2
           department = State.active.order(:id)
           options = department.map { |d| "#{d.id}- #{d.name}" }.join("\n")
           message = <<~MSG.strip
-          Gracias por tu respuesta! Ahora, por favor, indícanos en qué departamento de Paraguay vivís. 📍
+            Gracias por tu respuesta!#{' '}
+            📍¿En qué departamento del país vivís?
+            Envíanos SOLO el número del departamento (Ej: 1)
 
-          Envíanos SOLO el número del departamento (Ej: 1)
-          #{options}
-        MSG
+            #{options}
+          MSG
 
           BotLogger.response(from, participant.status, message)
           BotLogger.state_change(from, participant.status)
@@ -68,70 +65,153 @@ class WhatsappController < ApplicationController
           participant.state_id = body
           participant.status = 3
           message = <<~MSG.strip
-          Gracias por tu respuesta!
-          Ahora, por favor, indícanos tu edad.
+            ¡Gracias por tu respuesta!
+
+            Ahora, por favor, indícanos tu edad.
           MSG
           BotLogger.response(from, participant.status, message)
           BotLogger.state_change(from, participant.status)
         else
-          message = "Envianos SOLO el número del departamento (Ej: 0 a 18)."
+          message = 'Envianos SOLO el número del departamento (Ej: 0 a 18).'
           BotLogger.error(from, participant.status, message)
         end
-
-      when 3 # Se registra la edad y se solicita la primera participación
+      when 3 # Se registra la edad y se solicita el genero
         if type == 'text' && is_number?(body) && (18..100).include?(body.to_i)
           participant.age = body.to_i
           participant.status = 4
-          message = "Por último precisamos el número de LOTE que se encuentra al dorso de cada botella (Ej: L12345)"
-          BotLogger.response(from, participant.status, message)
-          BotLogger.state_change(from, participant.status)
-        else
           message = <<~MSG.strip
-          Envianos tu edad en formato numérico (Ej: 26).
-          Además, recordá que tenés que ser *mayor de 18 años* para participar.
+            🙋‍♀️🙋‍♂️ ¿Cuál es tu género?
+
+            1. Femenino
+            2. Masculino
+            3. Prefiero no decir
+            4. Otro
           MSG
+        else
+          message = 'Debés ser mayor de edad para participar.'
           BotLogger.error(from, participant.status, message)
         end
-
-      when 4 # Se crea la primera participación
-        if body.present?
-          participation = participant.participations.create!(
-            code_str: body
-            )
+      when 4
+        if type == 'text' && is_number?(body) && (1..4).include?(body.to_i)
+          participant.genre = body.to_i - 1
           participant.status = 5
-          message = <<~MSG.strip
-            🎉 ¡Ya estás registrado/a en la promoción *UN VINO PARA TODO HASTA PARA GANAR*!
-            Para más detalles, seguinos en nuestra cuenta @vinossantahelena_py y no te pierdas ninguna novedad.
-          MSG
-          BotLogger.response(from, participant.status, message)
-          BotLogger.state_change(from, participant.status)
+
+          message = '🧾 Ingresá los ultimos 4 numeros de tu factura de compra:'
         else
-          message = "Por favor, escribí el número de LOTE que se encuentra al dorso de la botella (Ej: L12345)."
+          message = <<~MSG.strip
+            Por favor respondé con un número del 1 al 4 según tu género:
+            1. Femenino
+            2. Masculino
+            3. Prefiero no decir
+            4. Otro
+          MSG
           BotLogger.error(from, participant.status, message)
         end
-
-      when 5 # Estatus intermedio, para mejor UX
-        if type == 'text' && body.present?
-          message = "Hola! Si querés registrar otra botella, respondé con el número de lote."
+      when 5
+        if is_number?(body)
           participant.status = 6
-          BotLogger.response(from, participant.status, message)
-          BotLogger.state_change(from, participant.status)
-        end
-
-      when 6 # Se registran las siguientes participaciones
-        if type == 'text' && body.present?
-        participant.status = 5
-          participant.participations.create!(
-            code_str: body
-            )
+          participant.participations.create!(receipt: body, product_id: nil)
           message = <<~MSG.strip
-          🎉 ¡Ya estás registrado/a en la promoción *UN VINO PARA TODO HASTA PARA GANAR*!
-          Para más detalles, seguinos en nuestra cuenta @vinossantahelena_py y no te pierdas ninguna novedad.
-        MSG
-        BotLogger.response(from, participant.status, message)
-        BotLogger.state_change(from, participant.status)
-        BotLogger.done(from)
+            🏪 ¿En qué local hiciste tu compra?
+          MSG
+        else
+          message = 'Por favor, ingresá un número de factura válido (4 dígitos).'
         end
+      when 6 # Registra el local de compra y setea el nro de factura
+        if type == 'text' && body.present?
+          participation = participant.participations.last
+          participation.local_str = body
+          options = Product.active.map { |p| "#{p.id}- #{p.name}" }.join("\n")
+          participation.save!
+          message = <<~MSG.strip
+            🔋 ¿Qué tipo de pila compraste? Seleccioná una opción:
+            #{options}
+          MSG
+          participant.status = 7
+        elsif body.present? && participant.participations.last.present?
+          # Si el participante ya tiene una participación, se registra la respuesta
+          participation.status = 5
+          participant.participation.create(
+            receipt: body,
+            product_id: nil
+          )
+          message = <<~MSG.strip
+            ¡Gracias por tu respuesta!#{' '}
+
+            🏪 ¿En qué local hiciste tu compra?
+          MSG
+        else
+          message = 'Por favor, ingresá el nombre del local donde realizaste la compra.'
+          BotLogger.error(from, participant.status, message)
+        end
+      when 7 # Se pregunta por la cantidad del producto
+        if type == 'text' && body.present? && (1..8).include?(body.to_i)
+          participant.status = 8
+          participation = participant.participations.last
+          participation.product_id = body.to_i
+          participation.save!
+          qty = %w[16 8 6 4 2 1]
+          qty = qty.map { |q| "#{q}" }.join("\n")
+          message = <<~MSG.strip
+              🔢 ¿Cuántas pilas tenía el producto comprado?
+              🔘 Opciones:
+            #{qty}
+          MSG
+        else
+          message = 'Por favor, seleccioná una opción del 1 al 8.'
+        end
+      when 8 # Se registra la cantidad de pilas compradas
+        if type == 'text' && is_number?(body) && %w[16 8 6 4 2 1].include?(body)
+          participant.status = 9
+          participation = participant.participations.last
+          participation.product_qty = body.to_i
+          participation.save!
+          message = <<~MSG.strip
+            📸 Por favor, subí una foto nítida del comprobante de compra donde se vean los datos de la compra.
+          MSG
+        else
+          message = 'Por favor, ingresá un número válido de pilas compradas.'
+        end
+      when 9 # Se solicita la foto del comprobante de compra
+        if type == 'image'
+          media_id = params.dig(:entry, 0, :changes, 0, :value, :messages, 0, :image, :id)
+
+          if media_id.present?
+            media_url = w.get_media_url(media_id)
+
+            if media_url.present?
+              downloaded_image = URI.open(media_url, 'Authorization' => w.token)
+
+              participation = participant.participations.last
+              participation.image.attach(io: downloaded_image, filename: "comprobante-#{participant.document}.jpg",
+                                         content_type: 'image/jpeg')
+
+              participant.status = 10
+              message = <<~MSG.strip
+                ✅ ¡Gracias por completar tu inscripción!#{' '}
+                Ya estás participando en el sorteo Duracell te lleva al F1 🏎️
+
+                Te contactaremos por este medio si sos uno de los ganadores.
+                *(No olvides guardar tu factura de compra)*
+
+                🔗Términos y condiciones del sorteo.#{' '}
+              MSG
+            else
+              message = 'No pudimos acceder a la imagen. Por favor, intentá nuevamente.'
+            end
+          else
+            message = 'No encontramos la imagen. Asegurate de subir una foto válida del comprobante.'
+          end
+        else
+          message = 'Por favor, subí una foto nítida del comprobante de compra.'
+        end
+      when 10 # Participación finalizada
+        message = <<~MSG.strip
+          👋 ¡Hola de vuelta!
+
+          🧾 Ingresá los ultimos 4 numeros de tu factura de compra para seguir sumando puntos:
+        MSG
+        participant.status = 5
       end
 
       participant.save!
