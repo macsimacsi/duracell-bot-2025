@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redireccionando a WhatsApp...</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var phone = "595973347626";
+      var message = "¡Hola!, quiero participar del sorteo.";
+      var whatsappURL = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+      window.location.href = whatsappURL;
+    });
+  </script>
+</head>
+<body>
+  <p>Redirigiendo a WhatsApp...</p>
+  <p>Si no se abre automáticamente, hacé <a id="manual-link" href="#">clic acá</a>.</p>
+
+  <script>
+    var link = document.getElementById("manual-link");
+    var phone = "595973347626";
+    var message = "¡Hola!, quiero participar del sorteo.";
+    link.href = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+  </script>
+</body>
+</html>
