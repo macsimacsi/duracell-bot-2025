@@ -14,7 +14,7 @@
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
 
-  <title>Iniciar sesión | <%= ENV['APP_NAME'] %></title>
+  <title>Iniciar sesión | <%= Rails.application.credentials.dig(:app_name, :name) %></title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 

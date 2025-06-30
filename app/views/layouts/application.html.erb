@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title><%= ENV['APP_NAME'] %></title>
+    <title><%= Rails.application.credentials.dig(:app_name, :name) %></title>
     <meta property="og:url" content="<%= root_url %>">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="<%= ENV['APP_NAME']%>">
+    <meta property="og:title" content="<%= Rails.application.credentials.dig(:app_name, :name)%>">
     <meta property="og:description" content="">
     <meta property="og:image" content="<%= root_url %>/img/logo.png">
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="">
     <meta property="twitter:domain" content="<%= request.host %>">
     <meta property="twitter:url" content="<%= root_url %>">
-    <meta name="twitter:title" content="<%= ENV['APP_NAME']%>">
+    <meta name="twitter:title" content="<%= Rails.application.credentials.dig(:app_name, :name)%>">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="<%= root_url %>/img/logo.png">
     <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
