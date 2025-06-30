@@ -123,5 +123,5 @@ Rails.application.configure do
   config.action_view.logger = nil
   config.active_record.logger = nil
   config.action_controller.enable_fragment_cache_logging = false
-  config.hosts << 'duracellbot.gdigital.cc
+  config.hosts << 'duracellbot.gdigital.cc'
 end
