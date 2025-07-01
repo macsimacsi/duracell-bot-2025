@@ -12,15 +12,16 @@ module Tools
     config.load_defaults 6.1
     config.time_zone = 'America/Asuncion'
 
-    config.whatsapp_messages_endpoint = "https://graph.facebook.com/v21.0/#{ENV['ID_PHONE_NUMBER']}/messages"
-    config.whatsapp_phone_number_id = ENV['ID_PHONE_NUMBER']
-    config.whatsapp_media_endpoint = 'https://graph.facebook.com/v21.0/'
-    config.whatsapp_token = "Bearer #{ENV['WHATSAPP_TOKEN']}"
+    config.whatsapp_phone_number_id = Rails.application.credentials.dig(:meta, :phone_number_id)
+    config.whatsapp_messages_endpoint = "https://graph.facebook.com/v22.0/#{config.whatsapp_phone_number_id}/messages"
+    config.whatsapp_media_endpoint = 'https://graph.facebook.com/v22.0/'
+    config.whatsapp_token = "Bearer #{Rails.application.credentials.dig(:meta, :whatsapp_token)}"
+
     config.action_cable.mount_path = '/cable'
-    config.hosts << 'santahelena.gdigital.cc'
+    config.hosts << 'duracell.gdigital.cc'
     config.hosts << '127.0.0.1'
     config.hosts << 'localhost'
-    config.hosts << 'santahelenabot.gdigital.com.py'
+    config.hosts << 'duracellbot.gdigital.com.py'
 
     config.hosts += ENV.fetch('ALLOWED_HOSTS', '').split(',').map(&:strip)
   end
