@@ -1,0 +1,6 @@
+<h1>Bienvenidos</h1>
+<p>Esta es la página de inicio del bot de <%= Rails.application.credentials.dig(:app_name, :name) || "Nombre no definido"  %></p>  
+
+<p>Para hablar con el bot, envía un mensaje al número de WhatsApp configurado.</p>
+
+<p>WhatsApp: <a href="https://wa.me/<% Rails.application.credentials.dig(:app_name, :phone_number) || "Nombre no definido"  %>">Enviar mensaje</a></p>
