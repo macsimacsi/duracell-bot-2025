@@ -1,6 +1,18 @@
-<h1>Bienvenidos</h1>
-<p>Esta es la página de inicio del bot de <%= Rails.application.credentials.dig(:app_name, :name) || "Nombre no definido"  %></p>  
+<div class="container-fluid p-0">
+  <div class="position-relative text-center text-white" style="background-image: url('<%= asset_path('banner.png') %>'); background-size: cover; background-position: center; height: 500px;">
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.5);"></div>
+    <div class="position-relative d-flex flex-column justify-content-center align-items-center h-100">
+      <%= image_tag 'logo.png', class: "rounded-circle mb-3 shadow", size: "120x120", alt: "Logo del bot" %>
+      <h1 class="display-4 fw-bold">¡Bienvenidos a <%= Rails.application.credentials.dig(:app_name, :name) || "Nuestro Bot" %>!</h1>
+    </div>
+  </div>
 
-<p>Para hablar con el bot, envía un mensaje al número de WhatsApp configurado.</p>
+  <div class="container text-center py-5">
+    <p class="fs-5">Interactuá con el bot directamente desde el WhatsApp.</p>
 
-<p>WhatsApp: <a href="https://wa.me/<%= Rails.application.credentials.dig(:app_name, :phone_number) || "Nombre no definido"  %>">Enviar mensaje</a></p>
+    <a href="https://wa.me/<%= Rails.application.credentials.dig(:app_name, :phone_number) || "000000000" %>"
+       class="btn btn-lg btn-success shadow px-5 py-3 fs-4">
+      📲 Hablar con el bot por WhatsApp
+    </a>
+  </div>
+</div>
