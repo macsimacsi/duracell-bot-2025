@@ -34,33 +34,41 @@
     </li>
   <% end %>
 
-  <li class="sidebar-item">
-    <%= link_to winners_path, class: 'sidebar-link' do %>
-      <i class="align-middle me-2 fas fa-fw fa-trophy"></i>
-      <span class="align-middle">Ganadores</span>
-    <% end %>
-  </li>
+  <% if current_admin.can('winner', 'read') %>
+    <li class="sidebar-item">
+      <%= link_to winners_path, class: 'sidebar-link' do %>
+        <i class="align-middle me-2 fas fa-fw fa-trophy"></i>
+        <span class="align-middle">Ganadores</span>
+      <% end %>
+    </li>  
+  <% end %>
 
-  <li class="sidebar-item">
-    <%= link_to prizes_path, class: 'sidebar-link' do %>
-      <i class="align-middle me-2 fas fa-fw fa-gift"></i>
-      <span class="align-middle">Premios</span>
-    <% end %>
-  </li>
+  <% if current_admin.can('prize', 'read') %>
+    <li class="sidebar-item">
+      <%= link_to prizes_path, class: 'sidebar-link' do %>
+        <i class="align-middle me-2 fas fa-fw fa-gift"></i>
+        <span class="align-middle">Premios</span>
+      <% end %>
+    </li>  
+  <% end %>
 
-  <li class="sidebar-item">
-    <%= link_to sorteo_winner_path, class: 'sidebar-link' do %>
-      <i class="align-middle me-2 fas fa-fw fa-store"></i>
-      <span class="align-middle">Sorteador</span>
-    <% end %>
-  </li>
+  <% if current_admin.can('winner', 'create') %>
+    <li class="sidebar-item">
+      <%= link_to sorteo_winner_path, class: 'sidebar-link' do %>
+        <i class="align-middle me-2 fas fa-fw fa-store"></i>
+        <span class="align-middle">Sorteador</span>
+      <% end %>
+    </li>  
+  <% end %>
 
-  <li class="sidebar-item">
-    <%= link_to sorteo_config_path, class: 'sidebar-link' do %>
-      <i class="align-middle me-2 fas fa-fw fa-cogs"></i>
-      <span class="align-middle">Configurar Sorteo</span>
-    <% end %>
-  </li>
+  <% if current_admin.can('winner', 'create') %>
+    <li class="sidebar-item">
+      <%= link_to sorteo_config_path, class: 'sidebar-link' do %>
+        <i class="align-middle me-2 fas fa-fw fa-cogs"></i>
+        <span class="align-middle">Configurar Sorteo</span>
+      <% end %>
+    </li>  
+  <% end %>
 
   <li class="sidebar-header">
     Administración
