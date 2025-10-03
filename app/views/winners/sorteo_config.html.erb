@@ -20,10 +20,10 @@
 
       <div class="col-md-4">
         <%= label_tag :prizes, 'Premios', class: 'form-label fw-semibold' %>
-        <%= select_tag 'prizes[]',
-          options_for_select(@prizes.map { |c| [c.name, c.quantity, c.id] }, params[:prizes]),
-          multiple: false,
-          class: 'form-select select2-multiple' %>
+        <%= select_tag 'prize_id',
+        options_for_select(@prizes.map { |c| ["#{c.name} (#{c.quantity})", c.id] }, params[:prize_id]),
+        multiple: false,
+        class: 'form-select select2-multiple' %>
       </div>
 
     <div class="card-footer d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">

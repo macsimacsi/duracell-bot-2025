@@ -26,7 +26,8 @@ class WinnersController < ApplicationController
   def sorteo
     if request.post?
       states = Array(params[:states]).reject { |c| c == 'all' || c.blank? }
-      prize_ids = Array(params[:prizes]).reject { |p| p == 'all' || p.blank? }
+      prize_id = params[:prize_id].presence
+      prize = Prize.find_by(id: prize_id)
 
       banned_docs   = Banned.pluck(:document)
       winner_docs   = Winner.joins(:participant).pluck('participants.document').uniq
@@ -45,7 +46,6 @@ class WinnersController < ApplicationController
       end
 
       winner = participants.sample
-      prize = Prize.find_by(id: prize_ids.sample)
 
       Winner.create!(participant: winner, prize: prize)
 
