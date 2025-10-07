@@ -9,12 +9,25 @@ module AdminsHelper
         { header: icon('text') + ' Departamento', value: ->(p) { p.state&.name || 'Sin departamento' } },
         { header: icon('calendar-alt') + ' Fecha', value: ->(p) { py_date(p.updated_at) } }
       ]
+
     when :participations
       [
         { header: icon('text') + ' Número', value: ->(pp) { pp.participant.contact } },
         { header: icon('text') + ' CI', value: ->(pp) { pp.participant.document || 'N/D' } },
-        { header: icon('text') + ' Departamento', value: ->(pp) { pp.participant.state&.name || 'Sin departamento' } }
+        { header: icon('text') + ' Departamento', value: ->(pp) { pp.participant.state&.name || 'Sin departamento' } },
+        { header: icon('image') + ' Imagen', value: lambda { |pp|
+                                                      if pp.image.attached?
+                                                        link_to 'Ver imagen',
+                                                                Rails.application.routes.url_helpers.rails_blob_url(
+                                                                  pp.image, only_path: true
+                                                                ),
+                                                                target: '_blank'
+                                                      else
+                                                        'Sin imagen'
+                                                      end
+                                                    } }
       ]
+
     when :winners
       [
         { header: icon('text') + ' Número', value: ->(w) { w.participant.contact } },
@@ -23,11 +36,19 @@ module AdminsHelper
                                                } },
         { header: icon('pin') + ' Departamento', value: ->(w) { w.participant.state&.name } },
         { header: icon('text') + ' Participaciones', value: ->(w) { w.participant.participations_count || 'N/D' } },
-        { header: icon('barcode') + ' Lote Ganador', value: lambda { |w|
-                                                              w.participant.participations.order(created_at: :desc).first&.code_str || 'N/D'
-                                                            } },
-        { header: icon('trophy') + ' Premio', value: ->(w) { w.participant.winner&.prize&.name || 'N/D' } }
-
+        { header: icon('trophy') + ' Premio', value: ->(w) { w.participant.winner&.prize&.name || 'N/D' } },
+        { header: icon('image') + ' Imagen', value: lambda { |w|
+                                                      last_participation = w.participant.participations.last
+                                                      if last_participation&.image&.attached?
+                                                        link_to 'Ver imagen',
+                                                                Rails.application.routes.url_helpers.rails_blob_url(
+                                                                  last_participation.image, only_path: true
+                                                                ),
+                                                                target: '_blank'
+                                                      else
+                                                        'Sin imagen'
+                                                      end
+                                                    } }
       ]
     when :states
       [
